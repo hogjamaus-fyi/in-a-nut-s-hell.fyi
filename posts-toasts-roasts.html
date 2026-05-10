@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>posts, toasts and roasts [Twitter]</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        body {
+            background: #10250b;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .header {
+            color: rgba(250, 253, 255, 0.9);
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: "Fredoka", "Trebuchet MS", sans-serif;
+        }
+
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2rem;
+        }
+
+        .header p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: rgba(246, 251, 255, 0.78);
+        }
+
+        .back-link {
+            margin-bottom: 20px;
+        }
+
+        .back-link a {
+            color: rgba(255, 255, 255, 0.84);
+            text-decoration: none;
+            font-family: "Fredoka", "Trebuchet MS", sans-serif;
+            padding: 0.78rem 1rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.26);
+            backdrop-filter: blur(8px);
+            transition: transform 0.18s ease, background-color 0.18s ease;
+            display: inline-block;
+        }
+
+        .back-link a:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Image Gallery Grid */
+        .gallery-container {
+            width: 100%;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        .gallery-thumb {
+            cursor: pointer;
+            border-radius: 16px;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-thumb:hover {
+            transform: scale(1.08);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Lightbox Modal */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        .lightbox-modal.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        #lightbox-image {
+            max-width: 100%;
+            max-height: 85vh;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 2.5rem;
+            cursor: pointer;
+            padding: 0;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s ease;
+            font-weight: 300;
+            line-height: 1;
+        }
+
+        .lightbox-close:hover {
+            color: rgba(255, 255, 255, 1);
+        }
+
+        @media (max-width: 768px) {
+            .image-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+
+            .gallery-thumb {
+                height: 150px;
+            }
+
+            .lightbox-close {
+                top: 10px;
+                right: 10px;
+                background: rgba(0, 0, 0, 0.6);
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="back-link">
+            <a href="embeded.html">← Retour</a>
+        </div>
+
+        <div class="header">
+            <h1>postes, toasts et rôtis</h1>
+            <p>Twitter</p>
+        </div>
+
+        <div class="gallery-container">
+            <!-- Image Gallery Grid -->
+            <div class="image-gallery">
+                <img src="tw1.png" alt="post 1" class="gallery-thumb" data-index="0">
+                <img src="tw2.png" alt="post 2" class="gallery-thumb" data-index="1">
+                <img src="tw3.png" alt="post 3" class="gallery-thumb" data-index="2">
+                <img src="tw4.png" alt="post 4" class="gallery-thumb" data-index="3">
+                <img src="tw5.png" alt="post 5" class="gallery-thumb" data-index="4">
+                <img src="tw6.png" alt="post 6" class="gallery-thumb" data-index="5">
+            </div>
+
+            <!-- Lightbox Modal -->
+            <div id="lightbox-modal" class="lightbox-modal">
+                <div class="lightbox-content">
+                    <img id="lightbox-image" src="" alt="enlarged image">
+                    <button class="lightbox-close">×</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Gallery lightbox functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryThumbs = document.querySelectorAll('.gallery-thumb');
+            const lightboxModal = document.getElementById('lightbox-modal');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const lightboxClose = document.querySelector('.lightbox-close');
+            const images = Array.from(galleryThumbs).map(thumb => thumb.src);
+            let currentIndex = 0;
+
+            // Open lightbox on thumbnail click
+            galleryThumbs.forEach((thumb, index) => {
+                thumb.addEventListener('click', function() {
+                    currentIndex = index;
+                    lightboxImage.src = thumb.src;
+                    lightboxModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            // Close lightbox on close button click
+            lightboxClose.addEventListener('click', closeLightbox);
+
+            // Close lightbox on background click
+            lightboxModal.addEventListener('click', function(e) {
+                if (e.target === lightboxModal) {
+                    closeLightbox();
+                }
+            });
+
+            // Close lightbox function
+            function closeLightbox() {
+                lightboxModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (!lightboxModal.classList.contains('active')) return;
+                
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                } else if (e.key === 'ArrowRight') {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    lightboxImage.src = images[currentIndex];
+                } else if (e.key === 'ArrowLeft') {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                    lightboxImage.src = images[currentIndex];
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

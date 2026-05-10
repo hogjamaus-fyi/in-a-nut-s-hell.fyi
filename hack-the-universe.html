@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hack the universe [YouTube List des Videos]</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        body {
+            background: #10250b;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .header {
+            color: rgba(250, 253, 255, 0.9);
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: "Fredoka", "Trebuchet MS", sans-serif;
+        }
+
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2rem;
+        }
+
+        .header p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: rgba(246, 251, 255, 0.78);
+        }
+
+        .back-link {
+            margin-bottom: 20px;
+        }
+
+        .back-link a {
+            color: rgba(255, 255, 255, 0.84);
+            text-decoration: none;
+            font-family: "Fredoka", "Trebuchet MS", sans-serif;
+            padding: 0.78rem 1rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.26);
+            backdrop-filter: blur(8px);
+            transition: transform 0.18s ease, background-color 0.18s ease;
+            display: inline-block;
+        }
+
+        .back-link a:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .iframe-wrapper {
+            width: 100%;
+            max-width: 900px;
+            height: 70vh;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 24px 60px rgba(6, 14, 10, 0.42);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="back-link">
+            <a href="embeded.html">← Retour</a>
+        </div>
+
+        <div class="header">
+            <h1>pirater l'univers</h1>
+            <p>YouTube Liste des Videos</p>
+        </div>
+
+        <div class="iframe-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=smQNthQ-BsDoVWIM&amp;list=PLdIX6OGJMtA16DzkVL_HranUFB9Bh6dQc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+
+</html>
