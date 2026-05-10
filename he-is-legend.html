@@ -4,7 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>He Is Legend Mouck Shudow [YouTube]</title>
+    <meta name="description" content="He Is Legend - A curated YouTube playlist featuring inspiring and legendary content. Discover stories of legends and legendary moments.">
+    <meta name="theme-color" content="#10250b">
+    <meta property="og:title" content="He Is Legend - YouTube Playlist">
+    <meta property="og:description" content="He Is Legend - A curated YouTube playlist featuring inspiring and legendary content.">
+    <meta property="og:type" content="video.playlist">
+    <meta property="og:url" content="https://in-a-nut-shell.fyi/he-is-legend.html">
+    <link rel="canonical" href="https://in-a-nut-shell.fyi/he-is-legend.html">
+    <title>He Is Legend - YouTube Playlist | shell</title>
     <style>
         * {
             box-sizing: border-box;
@@ -85,6 +92,21 @@
             width: 100%;
             height: 100%;
             border: none;
+            display: block;
+        }
+
+        /* Hide YouTube share buttons, watch buttons, and UI elements */
+        .iframe-wrapper iframe::after,
+        .iframe-wrapper [style*="share"],
+        .iframe-wrapper [class*="share"],
+        .iframe-wrapper [id*="share"],
+        .iframe-wrapper button[aria-label*="Share"],
+        .iframe-wrapper button[aria-label*="Watch"],
+        .iframe-wrapper [class*="button"][aria-label*="Share"],
+        .iframe-wrapper [class*="button"][aria-label*="Watch"] {
+            display: none !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
         }
     </style>
 </head>
@@ -101,7 +123,7 @@
         </div>
 
         <div class="iframe-wrapper">
-            <iframe src="https://www.youtube.com/embed/aTjfR3XDEMI" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/aTjfR3XDEMI?modestbranding=1&rel=0&fs=0&showinfo=0" allowfullscreen></iframe>
         </div>
     </div>
 </body>
