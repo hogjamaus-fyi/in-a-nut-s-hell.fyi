@@ -2,9 +2,40 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>pewdie mars - bruno pie! [YouTube Liste des Videos]</title>
+    <title>Pewdie Mars - Bruno Pie Playlist | in-a-nut-shell.fyi</title>
+    <meta name="description" content="Watch Pewdie Mars - Bruno Pie, a curated YouTube playlist featuring entertaining and creative videos.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="in-a-nut-shell.fyi">
+    <meta name="theme-color" content="#10250b">
+    <link rel="canonical" href="https://in-a-nut-shell.fyi/pewdie-mars.html">
+
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="in-a-nut-shell.fyi">
+    <meta property="og:title" content="Pewdie Mars - Bruno Pie Playlist | in-a-nut-shell.fyi">
+    <meta property="og:description" content="Watch Pewdie Mars - Bruno Pie, a curated YouTube playlist featuring entertaining and creative videos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://in-a-nut-shell.fyi/pewdie-mars.html">
+    <meta property="og:image" content="https://i.ytimg.com/vi/H3u8srJDPPc/maxresdefault.jpg">
+    <meta property="og:image:alt" content="Pewdie Mars - Bruno Pie YouTube playlist thumbnail.">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pewdie Mars - Bruno Pie Playlist | in-a-nut-shell.fyi">
+    <meta name="twitter:description" content="Watch Pewdie Mars - Bruno Pie, a curated YouTube playlist featuring entertaining and creative videos.">
+    <meta name="twitter:image" content="https://i.ytimg.com/vi/H3u8srJDPPc/maxresdefault.jpg">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Pewdie Mars - Bruno Pie Playlist",
+            "url": "https://in-a-nut-shell.fyi/pewdie-mars.html",
+            "description": "A curated YouTube playlist featuring entertaining and creative videos.",
+            "sameAs": "https://www.youtube.com/watch?v=H3u8srJDPPc&list=PLdIX6OGJMtA3NLzJ1ZOijAWlV9r5Vws6I"
+        }
+    </script>
     <style>
         * {
             box-sizing: border-box;
@@ -15,7 +46,7 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            overflow: hidden;
+            overflow-y: auto;
         }
 
         body {
@@ -24,12 +55,12 @@
 
         .container {
             width: 100%;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 20px;
+            justify-content: flex-start;
+            padding: 30px 12px;
         }
 
         .header {
@@ -72,21 +103,110 @@
             background: rgba(255, 255, 255, 0.2);
         }
 
-        .iframe-wrapper {
+        .video-block {
             width: 100%;
-            max-width: 900px;
-            height: 70vh;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 24px 60px rgba(6, 14, 10, 0.42);
+            max-width: 1400px;
+            margin-bottom: 28px;
         }
 
-        iframe {
+        .iframe-wrapper {
             width: 100%;
-            height: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 12px 12px 0 0;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(6, 14, 10, 0.5);
+            position: relative;
+        }
+
+        .iframe-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 10;
+            cursor: default;
+        }
+
+        .iframe-wrapper > div,
+        .iframe-wrapper iframe {
+            width: 100% !important;
+            height: 100% !important;
+            border: none;
+            display: block;
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 0 0 12px 12px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-top: none;
+        }
+
+        .play-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            color: rgba(250, 253, 255, 0.92);
+            font-family: "Fredoka", "Trebuchet MS", sans-serif;
+            font-size: 0.9rem;
+            padding: 6px 16px;
+            border-radius: 999px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: background 0.15s ease, transform 0.12s ease;
+            min-width: 80px;
+        }
+
+        .play-btn:hover {
+            background: rgba(255, 255, 255, 0.24);
+            transform: translateY(-1px);
+        }
+
+        .seek-slider {
+            flex: 1;
+            height: 4px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .seek-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(250, 253, 255, 0.9);
+            cursor: pointer;
+            box-shadow: 0 0 6px rgba(0,0,0,0.4);
+        }
+
+        .seek-slider::-moz-range-thumb {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(250, 253, 255, 0.9);
+            cursor: pointer;
             border: none;
         }
+
+        .time-display {
+            font-family: "Fredoka", "Trebuchet MS", sans-serif;
+            font-size: 0.82rem;
+            color: rgba(246, 251, 255, 0.7);
+            white-space: nowrap;
+            min-width: 90px;
+            text-align: right;
+        }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -96,14 +216,127 @@
         </div>
 
         <div class="header">
-            <h1>pewdie mars - bruno pie!</h1>
+            <h1>pewdie mars - bruno pie! [historical]</h1>
             <p>YouTube Liste des Videos</p>
         </div>
 
-        <div class="iframe-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=0lDYXfj_3mIlJBJy&amp;list=PLdIX6OGJMtA3NLzJ1ZOijAWlV9r5Vws6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="video-block">
+            <div class="iframe-wrapper">
+                <div id="player1"></div>
+            </div>
+            <div class="controls">
+                <button class="play-btn" id="btn1" onclick="togglePlay(0)">▶ Play</button>
+                <input type="range" class="seek-slider" id="slider1" min="0" max="1000" value="0" oninput="seekVideo(0, this.value)">
+                <span class="time-display" id="time1">0:00 / 0:00</span>
+            </div>
+        </div>
+
+        <div class="video-block">
+            <div class="iframe-wrapper">
+                <div id="player2"></div>
+            </div>
+            <div class="controls">
+                <button class="play-btn" id="btn2" onclick="togglePlay(1)">▶ Play</button>
+                <input type="range" class="seek-slider" id="slider2" min="0" max="1000" value="0" oninput="seekVideo(1, this.value)">
+                <span class="time-display" id="time2">0:00 / 0:00</span>
+            </div>
+        </div>
+
+        <div class="video-block">
+            <div class="iframe-wrapper">
+                <div id="player3"></div>
+            </div>
+            <div class="controls">
+                <button class="play-btn" id="btn3" onclick="togglePlay(2)">▶ Play</button>
+                <input type="range" class="seek-slider" id="slider3" min="0" max="1000" value="0" oninput="seekVideo(2, this.value)">
+                <span class="time-display" id="time3">0:00 / 0:00</span>
+            </div>
         </div>
     </div>
-</body>
 
-</html>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        const videoIds = ['H3u8srJDPPc', 'xfg-6_YW1PY', 'jN8yNnsHXJU'];
+        const players = [];
+        const isSeeking = [false, false, false];
+
+        function onYouTubeIframeAPIReady() {
+            videoIds.forEach((id, i) => {
+                players[i] = new YT.Player('player' + (i + 1), {
+                    videoId: id,
+                    playerVars: {
+                        controls: 0,
+                        modestbranding: 1,
+                        rel: 0,
+                        fs: 0,
+                        showinfo: 0,
+                        iv_load_policy: 3,
+                        disablekb: 0
+                    },
+                    events: {
+                        onStateChange: (e) => onPlayerStateChange(e, i)
+                    }
+                });
+            });
+        }
+
+        function onPlayerStateChange(event, i) {
+            const btn = document.getElementById('btn' + (i + 1));
+            if (event.data === YT.PlayerState.PLAYING) {
+                btn.textContent = '⏸ Pause';
+            } else {
+                btn.textContent = '▶ Play';
+            }
+        }
+
+        function togglePlay(i) {
+            const p = players[i];
+            if (!p) return;
+            const state = p.getPlayerState();
+            if (state === YT.PlayerState.PLAYING) {
+                p.pauseVideo();
+            } else {
+                p.playVideo();
+            }
+        }
+
+        function seekVideo(i, value) {
+            const p = players[i];
+            if (!p) return;
+            const duration = p.getDuration();
+            if (!duration) return;
+            const time = (value / 1000) * duration;
+            p.seekTo(time, true);
+        }
+
+        function formatTime(seconds) {
+            const m = Math.floor(seconds / 60);
+            const s = Math.floor(seconds % 60).toString().padStart(2, '0');
+            return m + ':' + s;
+        }
+
+        setInterval(() => {
+            players.forEach((p, i) => {
+                if (!p || typeof p.getCurrentTime !== 'function') return;
+                const current = p.getCurrentTime() || 0;
+                const duration = p.getDuration() || 0;
+                const slider = document.getElementById('slider' + (i + 1));
+                const timeEl = document.getElementById('time' + (i + 1));
+                if (slider && !isSeeking[i] && duration > 0) {
+                    slider.value = (current / duration) * 1000;
+                }
+                if (timeEl && duration > 0) {
+                    timeEl.textContent = formatTime(current) + ' / ' + formatTime(duration);
+                }
+            });
+        }, 500);
+
+        // Prevent slider drag from jumping during mousemove
+        document.querySelectorAll('.seek-slider').forEach((slider, i) => {
+            slider.addEventListener('mousedown', () => { isSeeking[i] = true; });
+            slider.addEventListener('touchstart', () => { isSeeking[i] = true; });
+            slider.addEventListener('mouseup', () => { isSeeking[i] = false; });
+            slider.addEventListener('touchend', () => { isSeeking[i] = false; });
+        });
+    </script>
+</body>
