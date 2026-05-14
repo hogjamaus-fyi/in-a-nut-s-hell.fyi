@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>big genius ai</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap");
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        body {
+            font-family: "Fredoka", "Trebuchet MS", sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(122, 179, 255, 0.24), transparent 34%),
+                radial-gradient(circle at bottom right, rgba(146, 255, 181, 0.16), transparent 28%),
+                linear-gradient(180deg, #08140a 0%, #0d2310 54%, #08140a 100%);
+            color: rgba(248, 251, 255, 0.92);
+            overflow-x: hidden;
+        }
+
+        .page {
+            min-height: 100vh;
+            padding: 24px;
+            display: grid;
+            place-items: center;
+        }
+
+        .shell {
+            width: min(1120px, 100%);
+            display: grid;
+            gap: 1.25rem;
+        }
+
+        .topbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .back-link {
+            color: rgba(255, 255, 255, 0.84);
+            text-decoration: none;
+            padding: 0.78rem 1rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: transform 0.18s ease, background-color 0.18s ease;
+        }
+
+        .back-link:hover,
+        .back-link:focus-visible {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .title-block {
+            text-align: right;
+        }
+
+        .title-block h1 {
+            margin: 0;
+            font-size: clamp(1.5rem, 3vw, 2.4rem);
+            letter-spacing: 0.04em;
+        }
+
+        .title-block p {
+            margin: 0.35rem 0 0;
+            color: rgba(236, 246, 255, 0.74);
+        }
+
+        .code-card,
+        .viewer-card {
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
+            box-shadow: 0 28px 70px rgba(4, 11, 7, 0.42);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            overflow: hidden;
+        }
+
+        .code-card {
+            padding: 1rem 1.1rem 1.15rem;
+        }
+
+        .code-meta {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 0.9rem;
+            color: rgba(245, 250, 255, 0.78);
+            font-size: 0.94rem;
+        }
+
+        .code-meta strong {
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 600;
+        }
+
+        pre {
+            margin: 0;
+            padding: 1rem;
+            border-radius: 18px;
+            background: rgba(7, 17, 10, 0.66);
+            color: #d7f8e1;
+            overflow: auto;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+            font-size: clamp(0.92rem, 1.8vw, 1.05rem);
+            line-height: 1.55;
+            border: 1px solid rgba(160, 255, 197, 0.12);
+        }
+
+        .viewer-card {
+            padding: 1rem;
+        }
+
+        .viewer-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            align-items: end;
+            margin-bottom: 1rem;
+        }
+
+        .viewer-head h2 {
+            margin: 0;
+            font-size: clamp(1.15rem, 2.3vw, 1.55rem);
+        }
+
+        .viewer-head p {
+            margin: 0.3rem 0 0;
+            color: rgba(238, 246, 255, 0.76);
+        }
+
+        .frame-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 42px;
+            gap: 1rem;
+            align-items: stretch;
+        }
+
+        .frame-window {
+            position: relative;
+            min-height: 72vh;
+            max-height: 76vh;
+            overflow: hidden;
+            border-radius: 18px;
+            background: linear-gradient(180deg, rgba(12, 28, 16, 0.78), rgba(6, 13, 9, 0.88));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        }
+
+        .frame-window::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 18%, transparent 82%, rgba(255, 255, 255, 0.04));
+            z-index: 2;
+        }
+
+        iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 220vh;
+            border: none;
+            pointer-events: none;
+            transform: translateY(0);
+            transform-origin: top center;
+            transition: transform 0.04s linear;
+            background: #0b1710;
+        }
+
+        .frame-note {
+            position: absolute;
+            left: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+            z-index: 3;
+            padding: 0.7rem 0.9rem;
+            border-radius: 999px;
+            background: rgba(7, 17, 10, 0.72);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: rgba(236, 246, 255, 0.8);
+            font-size: 0.92rem;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .slider-rail {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            padding: 0.35rem 0;
+        }
+
+        .scroll-slider {
+            width: 32px;
+            height: 100%;
+            margin: 0;
+            background: transparent;
+            cursor: ns-resize;
+            -webkit-appearance: slider-vertical;
+            appearance: slider-vertical;
+            writing-mode: vertical-lr;
+            direction: rtl;
+        }
+
+        .scroll-slider:focus-visible {
+            outline: 2px solid rgba(180, 231, 255, 0.9);
+            outline-offset: 4px;
+            border-radius: 999px;
+        }
+
+        @media (max-width: 760px) {
+            .page {
+                padding: 16px;
+            }
+
+            .frame-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .slider-rail {
+                order: 2;
+                justify-content: stretch;
+            }
+
+            .scroll-slider {
+                width: 100%;
+                height: 40px;
+                writing-mode: initial;
+                direction: ltr;
+                -webkit-appearance: auto;
+                appearance: auto;
+            }
+
+            .frame-window {
+                min-height: 62vh;
+                max-height: 66vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="shell">
+            <div class="topbar">
+                <a class="back-link" href="embeded.html">← Retour</a>
+                <div class="title-block">
+                    <h1>big genius ai</h1>
+                    <p>github preview</p>
+                </div>
+            </div>
+
+            <section class="code-card" aria-label="big-genius-ai.py code snippet">
+                <div class="code-meta">
+                    <strong>big-genius-ai.py</strong>
+                    <span>snippet at the top</span>
+                </div>
+                <pre><code>print("automate powerful friendship and emotional understanding...")
+print("pending input...")</code></pre>
+            </section>
+
+            <section class="viewer-card" aria-label="GitHub iframe preview">
+                <div class="viewer-head">
+                    <div>
+                        <h2>hogjamaus / big-ai-genius-level-emotions-detection-recognition</h2>
+                        <p>scroll the preview with the slider on the right; the frame itself stays non-clickable.</p>
+                    </div>
+                </div>
+
+                <div class="frame-grid">
+                    <div class="frame-window" id="frameWindow">
+                        <iframe
+                            id="githubFrame"
+                            src="https://github.com/hogjamaus/big-ai-genius-level-emotions-detection-recognition"
+                            title="GitHub repository preview"
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                        <div class="frame-note">If GitHub refuses to frame the page, the browser will still keep the preview shell in place.</div>
+                    </div>
+
+                    <div class="slider-rail">
+                        <input id="frameSlider" class="scroll-slider" type="range" min="0" max="100" value="0" aria-label="Preview scroll slider">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        const frameWindow = document.getElementById('frameWindow');
+        const githubFrame = document.getElementById('githubFrame');
+        const frameSlider = document.getElementById('frameSlider');
+
+        function updateFramePosition() {
+            const windowHeight = frameWindow.clientHeight;
+            const frameHeight = githubFrame.getBoundingClientRect().height;
+            const maxShift = Math.max(0, frameHeight - windowHeight);
+            const offset = maxShift * (Number(frameSlider.value) / 100);
+            githubFrame.style.transform = `translateY(${-offset}px)`;
+        }
+
+        frameSlider.addEventListener('input', updateFramePosition);
+        window.addEventListener('resize', updateFramePosition);
+        githubFrame.addEventListener('load', updateFramePosition);
+
+        updateFramePosition();
+    </script>
+</body>
+
+</html>
