@@ -151,7 +151,6 @@
 		var seek = document.createElement("input");
 		var time = document.createElement("span");
 		var wrapper = iframe.parentNode;
-		var videoBlock = iframe.parentNode;
 		var shell = {
 			iframe: iframe,
 			controls: controlBar,
@@ -193,7 +192,7 @@
 		controlBar.appendChild(seek);
 		controlBar.appendChild(time);
 		
-		videoBlock.insertAdjacentElement("afterend", controlBar);
+		wrapper.insertAdjacentElement("afterend", controlBar);
 	
 		toggle.addEventListener("click", function () {
 			toggleShell(shell);
