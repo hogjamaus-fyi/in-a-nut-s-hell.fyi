@@ -311,64 +311,9 @@
             <button id="lightbox-close" type="button" aria-label="Close image viewer">x</button>
         </div>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const thumbs = document.querySelectorAll(".gallery-thumb");
-                const lightbox = document.getElementById("lightbox");
-                const lightboxImage = document.getElementById("lightbox-image");
-                const closeButton = document.getElementById("lightbox-close");
-                const images = Array.from(thumbs).map(function(thumb) {
-                    return {
-                        src: thumb.getAttribute("src"),
-                        alt: thumb.getAttribute("alt")
-                    };
-                });
-                let currentIndex = 0;
-
-                thumbs.forEach(function(thumb, index) {
-                    thumb.addEventListener("click", function() {
-                        currentIndex = index;
-                        lightboxImage.src = images[currentIndex].src;
-                        lightboxImage.alt = images[currentIndex].alt;
-                        lightbox.classList.add("active");
-                        document.body.style.overflow = "hidden";
-                    });
-                });
-
-                function closeLightbox() {
-                    lightbox.classList.remove("active");
-                    document.body.style.overflow = "auto";
-                }
-
-                closeButton.addEventListener("click", closeLightbox);
-
-                lightbox.addEventListener("click", function(event) {
-                    if (event.target === lightbox) {
-                        closeLightbox();
-                    }
-                });
-
-                document.addEventListener("keydown", function(event) {
-                    if (!lightbox.classList.contains("active")) {
-                        return;
-                    }
-
-                    if (event.key === "Escape") {
-                        closeLightbox();
-                    } else if (event.key === "ArrowRight") {
-                        currentIndex = (currentIndex + 1) % images.length;
-                        lightboxImage.src = images[currentIndex].src;
-                        lightboxImage.alt = images[currentIndex].alt;
-                    } else if (event.key === "ArrowLeft") {
-                        currentIndex = (currentIndex - 1 + images.length) % images.length;
-                        lightboxImage.src = images[currentIndex].src;
-                        lightboxImage.alt = images[currentIndex].alt;
-                    }
-                });
-            });
-        </script>
     </div>
-    <script src="translations.js"></script>
+    <script src="gallery.js"></script>
+    <script src="lang.js"></script>
 </body>
 
 </html>

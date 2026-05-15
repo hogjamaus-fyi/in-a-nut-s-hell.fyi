@@ -134,7 +134,7 @@
             display: block;
         }
 
-        .controls {
+        .legend-player-controls {
             display: flex;
             align-items: center;
             gap: 12px;
@@ -146,7 +146,7 @@
             border-top: none;
         }
 
-        .play-btn {
+        .legend-custom-toggle {
             background: rgba(255, 255, 255, 0.15);
             border: 1px solid rgba(255, 255, 255, 0.28);
             color: rgba(250, 253, 255, 0.92);
@@ -160,12 +160,18 @@
             min-width: 80px;
         }
 
-        .play-btn:hover {
+        .legend-custom-toggle:hover {
             background: rgba(255, 255, 255, 0.24);
             transform: translateY(-1px);
         }
 
-        .seek-slider {
+        .legend-custom-toggle:focus-visible,
+        .legend-custom-seek:focus-visible {
+            outline: 2px solid rgba(250, 253, 255, 0.9);
+            outline-offset: 2px;
+        }
+
+        .legend-custom-seek {
             flex: 1;
             height: 4px;
             -webkit-appearance: none;
@@ -176,7 +182,7 @@
             cursor: pointer;
         }
 
-        .seek-slider::-webkit-slider-thumb {
+        .legend-custom-seek::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
             width: 14px;
@@ -187,7 +193,7 @@
             box-shadow: 0 0 6px rgba(0,0,0,0.4);
         }
 
-        .seek-slider::-moz-range-thumb {
+        .legend-custom-seek::-moz-range-thumb {
             width: 14px;
             height: 14px;
             border-radius: 50%;
@@ -196,7 +202,7 @@
             border: none;
         }
 
-        .time-display {
+        .legend-time-display {
             font-family: "Fredoka", "Trebuchet MS", sans-serif;
             font-size: 0.82rem;
             color: rgba(246, 251, 255, 0.7);
@@ -221,225 +227,87 @@
         </div>
 
         <div class="video-block">
-            <div class="iframe-wrapper"><div id="player1"></div></div>
-            <div class="controls">
-                <button class="play-btn" id="btn1" onclick="togglePlay(0)">▶ Play</button>
-                <input type="range" class="seek-slider" id="slider1" min="0" max="1000" value="0" oninput="seekVideo(0, this.value)">
-                <span class="time-display" id="time1">0:00 / 0:00</span>
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/CzYthhieuDE?rel=0&enablejsapi=1&playsinline=1" title="Hack the Universe video 1" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="video-block">
-            <div class="iframe-wrapper"><div id="player2"></div></div>
-            <div class="controls">
-                <button class="play-btn" id="btn2" onclick="togglePlay(1)">▶ Play</button>
-                <input type="range" class="seek-slider" id="slider2" min="0" max="1000" value="0" oninput="seekVideo(1, this.value)">
-                <span class="time-display" id="time2">0:00 / 0:00</span>
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/DhBgFhaVSIg?rel=0&enablejsapi=1&playsinline=1" title="Hack the Universe video 2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="video-block">
-            <div class="iframe-wrapper"><div id="player3"></div></div>
-            <div class="controls">
-                <button class="play-btn" id="btn3" onclick="togglePlay(2)">▶ Play</button>
-                <input type="range" class="seek-slider" id="slider3" min="0" max="1000" value="0" oninput="seekVideo(2, this.value)">
-                <span class="time-display" id="time3">0:00 / 0:00</span>
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/a6Bxo3ItBLQ?rel=0&enablejsapi=1&playsinline=1" title="Hack the Universe video 3" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="video-block">
-            <div class="iframe-wrapper"><div id="player4"></div></div>
-            <div class="controls">
-                <button class="play-btn" id="btn4" onclick="togglePlay(3)">▶ Play</button>
-                <input type="range" class="seek-slider" id="slider4" min="0" max="1000" value="0" oninput="seekVideo(3, this.value)">
-                <span class="time-display" id="time4">0:00 / 0:00</span>
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/EqAEjN0l-fQ?rel=0&enablejsapi=1&playsinline=1" title="Hack the Universe video 4" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="video-block">
-            <div class="iframe-wrapper"><div id="player5"></div></div>
-            <div class="controls">
-                <button class="play-btn" id="btn5" onclick="togglePlay(4)">▶ Play</button>
-                <input type="range" class="seek-slider" id="slider5" min="0" max="1000" value="0" oninput="seekVideo(4, this.value)">
-                <span class="time-display" id="time5">0:00 / 0:00</span>
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/U1lpTEk2BTI?rel=0&enablejsapi=1&playsinline=1" title="Hack the Universe video 5" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="video-block">
-            <div class="iframe-wrapper"><div id="player6"></div></div>
-            <div class="controls">
-                <button class="play-btn" id="btn6" onclick="togglePlay(5)">▶ Play</button>
-                <input type="range" class="seek-slider" id="slider6" min="0" max="1000" value="0" oninput="seekVideo(5, this.value)">
-                <span class="time-display" id="time6">0:00 / 0:00</span>
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/FNeUXM0uqm8?rel=0&enablejsapi=1&playsinline=1" title="Hack the Universe video 6" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="video-block">
-            <div class="iframe-wrapper"><div id="player7"></div></div>
-            <div class="controls">
-                <button class="play-btn" id="btn7" onclick="togglePlay(6)">▶ Play</button>
-                <input type="range" class="seek-slider" id="slider7" min="0" max="1000" value="0" oninput="seekVideo(6, this.value)">
-                <span class="time-display" id="time7">0:00 / 0:00</span>
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/RVY89rANb5U?rel=0&enablejsapi=1&playsinline=1" title="Hack the Universe video 7" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="video-block">
-            <div class="iframe-wrapper"><div id="player8"></div></div>
-            <div class="controls">
-                <button class="play-btn" id="btn8" onclick="togglePlay(7)">▶ Play</button>
-                <input type="range" class="seek-slider" id="slider8" min="0" max="1000" value="0" oninput="seekVideo(7, this.value)">
-                <span class="time-display" id="time8">0:00 / 0:00</span>
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/fLLO0_DrASk?rel=0&enablejsapi=1&playsinline=1" title="Hack the Universe video 8" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="video-block">
-            <div class="iframe-wrapper"><div id="player9"></div></div>
-            <div class="controls">
-                <button class="play-btn" id="btn9" onclick="togglePlay(8)">▶ Play</button>
-                <input type="range" class="seek-slider" id="slider9" min="0" max="1000" value="0" oninput="seekVideo(8, this.value)">
-                <span class="time-display" id="time9">0:00 / 0:00</span>
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/iO2eYyBOcTw?rel=0&enablejsapi=1&playsinline=1" title="Hack the Universe video 9" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="video-block">
-            <div class="iframe-wrapper"><div id="player10"></div></div>
-            <div class="controls">
-                <button class="play-btn" id="btn10" onclick="togglePlay(9)">▶ Play</button>
-                <input type="range" class="seek-slider" id="slider10" min="0" max="1000" value="0" oninput="seekVideo(9, this.value)">
-                <span class="time-display" id="time10">0:00 / 0:00</span>
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/kQzHuZhfZB0?rel=0&enablejsapi=1&playsinline=1" title="Hack the Universe video 10" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="video-block">
-            <div class="iframe-wrapper"><div id="player11"></div></div>
-            <div class="controls">
-                <button class="play-btn" id="btn11" onclick="togglePlay(10)">▶ Play</button>
-                <input type="range" class="seek-slider" id="slider11" min="0" max="1000" value="0" oninput="seekVideo(10, this.value)">
-                <span class="time-display" id="time11">0:00 / 0:00</span>
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/YGfHqQ-k0ys?rel=0&enablejsapi=1&playsinline=1" title="Hack the Universe video 11" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="video-block">
-            <div class="iframe-wrapper"><div id="player12"></div></div>
-            <div class="controls">
-                <button class="play-btn" id="btn12" onclick="togglePlay(11)">▶ Play</button>
-                <input type="range" class="seek-slider" id="slider12" min="0" max="1000" value="0" oninput="seekVideo(11, this.value)">
-                <span class="time-display" id="time12">0:00 / 0:00</span>
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/X1Ui4Td7vvA?rel=0&enablejsapi=1&playsinline=1" title="Hack the Universe video 12" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="video-block">
-            <div class="iframe-wrapper"><div id="player13"></div></div>
-            <div class="controls">
-                <button class="play-btn" id="btn13" onclick="togglePlay(12)">▶ Play</button>
-                <input type="range" class="seek-slider" id="slider13" min="0" max="1000" value="0" oninput="seekVideo(12, this.value)">
-                <span class="time-display" id="time13">0:00 / 0:00</span>
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/0Jro4Vg-StA?rel=0&enablejsapi=1&playsinline=1" title="Hack the Universe video 13" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </div>
 
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script>
-        const videoIds = [
-            'CzYthhieuDE',
-            'DhBgFhaVSIg',
-            'a6Bxo3ItBLQ',
-            'EqAEjN0l-fQ',
-            'U1lpTEk2BTI',
-            'FNeUXM0uqm8',
-            'RVY89rANb5U',
-            'fLLO0_DrASk',
-            'iO2eYyBOcTw',
-            'kQzHuZhfZB0',
-            'YGfHqQ-k0ys',
-            'X1Ui4Td7vvA',
-            '0Jro4Vg-StA',
-            'izgu4Bl71Lw',
-            'Qw5vkXcbI1c'
-        ];
-        const players = [];
-        const isSeeking = [false, false, false];
-
-        function onYouTubeIframeAPIReady() {
-            videoIds.forEach((id, i) => {
-                players[i] = new YT.Player('player' + (i + 1), {
-                    videoId: id,
-                    playerVars: {
-                        controls: 0,
-                        modestbranding: 1,
-                        rel: 0,
-                        fs: 0,
-                        showinfo: 0,
-                        iv_load_policy: 3,
-                        disablekb: 0
-                    },
-                    events: {
-                        onStateChange: (e) => onPlayerStateChange(e, i)
-                    }
-                });
-            });
-        }
-
-        function onPlayerStateChange(event, i) {
-            const btn = document.getElementById('btn' + (i + 1));
-            if (event.data === YT.PlayerState.PLAYING) {
-                btn.textContent = '⏸ Pause';
-            } else {
-                btn.textContent = '▶ Play';
-            }
-        }
-
-        function togglePlay(i) {
-            const p = players[i];
-            if (!p) return;
-            const state = p.getPlayerState();
-            if (state === YT.PlayerState.PLAYING) {
-                p.pauseVideo();
-            } else {
-                p.playVideo();
-            }
-        }
-
-        function seekVideo(i, value) {
-            const p = players[i];
-            if (!p) return;
-            const duration = p.getDuration();
-            if (!duration) return;
-            const time = (value / 1000) * duration;
-            p.seekTo(time, true);
-        }
-
-        function formatTime(seconds) {
-            const m = Math.floor(seconds / 60);
-            const s = Math.floor(seconds % 60).toString().padStart(2, '0');
-            return m + ':' + s;
-        }
-
-        setInterval(() => {
-            players.forEach((p, i) => {
-                if (!p || typeof p.getCurrentTime !== 'function') return;
-                const current = p.getCurrentTime() || 0;
-                const duration = p.getDuration() || 0;
-                const slider = document.getElementById('slider' + (i + 1));
-                const timeEl = document.getElementById('time' + (i + 1));
-                if (slider && !isSeeking[i] && duration > 0) {
-                    slider.value = (current / duration) * 1000;
-                }
-                if (timeEl && duration > 0) {
-                    timeEl.textContent = formatTime(current) + ' / ' + formatTime(duration);
-                }
-            });
-        }, 500);
-
-        // Prevent slider drag from jumping during mousemove
-        document.querySelectorAll('.seek-slider').forEach((slider, i) => {
-            slider.addEventListener('mousedown', () => { isSeeking[i] = true; });
-            slider.addEventListener('touchstart', () => { isSeeking[i] = true; });
-            slider.addEventListener('mouseup', () => { isSeeking[i] = false; });
-            slider.addEventListener('touchend', () => { isSeeking[i] = false; });
-        });
-    </script>
-    <script src="translations.js"></script>
+    <script src="gallery.js"></script>
+    <script src="lang.js"></script>
+    <script src="video.js"></script>
 </body>
 
 </html>

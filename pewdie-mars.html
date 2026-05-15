@@ -1,38 +1,38 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pewdie Mars - Bruno Pie Playlist | in-a-nut-shell.fyi</title>
-    <meta name="description" content="Watch Pewdie Mars - Bruno Pie, a curated YouTube playlist featuring entertaining and creative videos.">
+    <title>Pewdie Mars - Bruno Pie Liste YouTube | in-a-nut-shell.fyi</title>
+    <meta name="description" content="Regardez Pewdie Mars - Bruno Pie, une liste YouTube selectionnee avec des videos creatives et divertissantes.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="in-a-nut-shell.fyi">
     <meta name="theme-color" content="#10250b">
-    <link rel="canonical" href="https://in-a-nut-shell.fyi/pewdie-mars.html">
+    <link rel="canonical" href="https://in-a-nut-s-hell.fyi/pewdie-mars.html?lang=fr">
 
-    <meta property="og:locale" content="en_US">
+    <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="in-a-nut-shell.fyi">
-    <meta property="og:title" content="Pewdie Mars - Bruno Pie Playlist | in-a-nut-shell.fyi">
-    <meta property="og:description" content="Watch Pewdie Mars - Bruno Pie, a curated YouTube playlist featuring entertaining and creative videos.">
+    <meta property="og:title" content="Pewdie Mars - Bruno Pie Liste YouTube | in-a-nut-shell.fyi">
+    <meta property="og:description" content="Regardez Pewdie Mars - Bruno Pie, une liste YouTube selectionnee avec des videos creatives et divertissantes.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://in-a-nut-shell.fyi/pewdie-mars.html">
+    <meta property="og:url" content="https://in-a-nut-s-hell.fyi/pewdie-mars.html?lang=fr">
     <meta property="og:image" content="https://i.ytimg.com/vi/H3u8srJDPPc/maxresdefault.jpg">
-    <meta property="og:image:alt" content="Pewdie Mars - Bruno Pie YouTube playlist thumbnail.">
+    <meta property="og:image:alt" content="Miniature de la liste YouTube Pewdie Mars - Bruno Pie.">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pewdie Mars - Bruno Pie Playlist | in-a-nut-shell.fyi">
-    <meta name="twitter:description" content="Watch Pewdie Mars - Bruno Pie, a curated YouTube playlist featuring entertaining and creative videos.">
+    <meta name="twitter:title" content="Pewdie Mars - Bruno Pie Liste YouTube | in-a-nut-shell.fyi">
+    <meta name="twitter:description" content="Regardez Pewdie Mars - Bruno Pie, une liste YouTube selectionnee avec des videos creatives et divertissantes.">
     <meta name="twitter:image" content="https://i.ytimg.com/vi/H3u8srJDPPc/maxresdefault.jpg">
 
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            "name": "Pewdie Mars - Bruno Pie Playlist",
-            "url": "https://in-a-nut-shell.fyi/pewdie-mars.html",
-            "description": "A curated YouTube playlist featuring entertaining and creative videos.",
+            "name": "Pewdie Mars - Bruno Pie Liste YouTube",
+            "url": "https://in-a-nut-s-hell.fyi/pewdie-mars.html?lang=fr",
+            "description": "Une liste YouTube selectionnee avec des videos creatives et divertissantes.",
             "sameAs": "https://www.youtube.com/watch?v=H3u8srJDPPc&list=PLdIX6OGJMtA3NLzJ1ZOijAWlV9r5Vws6I"
         }
     </script>
@@ -134,7 +134,7 @@
             display: block;
         }
 
-        .controls {
+        .legend-player-controls {
             display: flex;
             align-items: center;
             gap: 12px;
@@ -146,7 +146,7 @@
             border-top: none;
         }
 
-        .play-btn {
+        .legend-custom-toggle {
             background: rgba(255, 255, 255, 0.15);
             border: 1px solid rgba(255, 255, 255, 0.28);
             color: rgba(250, 253, 255, 0.92);
@@ -160,12 +160,18 @@
             min-width: 80px;
         }
 
-        .play-btn:hover {
+        .legend-custom-toggle:hover {
             background: rgba(255, 255, 255, 0.24);
             transform: translateY(-1px);
         }
 
-        .seek-slider {
+        .legend-custom-toggle:focus-visible,
+        .legend-custom-seek:focus-visible {
+            outline: 2px solid rgba(250, 253, 255, 0.9);
+            outline-offset: 2px;
+        }
+
+        .legend-custom-seek {
             flex: 1;
             height: 4px;
             -webkit-appearance: none;
@@ -176,7 +182,7 @@
             cursor: pointer;
         }
 
-        .seek-slider::-webkit-slider-thumb {
+        .legend-custom-seek::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
             width: 14px;
@@ -187,7 +193,7 @@
             box-shadow: 0 0 6px rgba(0,0,0,0.4);
         }
 
-        .seek-slider::-moz-range-thumb {
+        .legend-custom-seek::-moz-range-thumb {
             width: 14px;
             height: 14px;
             border-radius: 50%;
@@ -196,7 +202,7 @@
             border: none;
         }
 
-        .time-display {
+        .legend-time-display {
             font-family: "Fredoka", "Trebuchet MS", sans-serif;
             font-size: 0.82rem;
             color: rgba(246, 251, 255, 0.7);
@@ -216,130 +222,53 @@
         </div>
 
         <div class="header">
-            <h1>pewdie mars - bruno pie! [historical]</h1>
-            <p>YouTube Liste des Videos</p>
+            <h1>pewdie mars - bruno pie! [historique]</h1>
+            <p>Liste YouTube</p>
         </div>
 
         <div class="video-block">
             <div class="iframe-wrapper">
-                <div id="player1"></div>
-            </div>
-            <div class="controls">
-                <button class="play-btn" id="btn1" onclick="togglePlay(0)">▶ Play</button>
-                <input type="range" class="seek-slider" id="slider1" min="0" max="1000" value="0" oninput="seekVideo(0, this.value)">
-                <span class="time-display" id="time1">0:00 / 0:00</span>
-            </div>
-        </div>
-
-        <div class="video-block">
-            <div class="iframe-wrapper">
-                <div id="player2"></div>
-            </div>
-            <div class="controls">
-                <button class="play-btn" id="btn2" onclick="togglePlay(1)">▶ Play</button>
-                <input type="range" class="seek-slider" id="slider2" min="0" max="1000" value="0" oninput="seekVideo(1, this.value)">
-                <span class="time-display" id="time2">0:00 / 0:00</span>
+                <iframe
+                    src="https://www.youtube.com/embed/H3u8srJDPPc?rel=0&enablejsapi=1&playsinline=1"
+                    title="Pewdie Mars - Bruno Pie video 1"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
             </div>
         </div>
 
         <div class="video-block">
             <div class="iframe-wrapper">
-                <div id="player3"></div>
+                <iframe
+                    src="https://www.youtube.com/embed/xfg-6_YW1PY?rel=0&enablejsapi=1&playsinline=1"
+                    title="Pewdie Mars - Bruno Pie video 2"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
             </div>
-            <div class="controls">
-                <button class="play-btn" id="btn3" onclick="togglePlay(2)">▶ Play</button>
-                <input type="range" class="seek-slider" id="slider3" min="0" max="1000" value="0" oninput="seekVideo(2, this.value)">
-                <span class="time-display" id="time3">0:00 / 0:00</span>
+        </div>
+
+        <div class="video-block">
+            <div class="iframe-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/jN8yNnsHXJU?rel=0&enablejsapi=1&playsinline=1"
+                    title="Pewdie Mars - Bruno Pie video 3"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
             </div>
         </div>
     </div>
 
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script>
-        const videoIds = ['H3u8srJDPPc', 'xfg-6_YW1PY', 'jN8yNnsHXJU'];
-        const players = [];
-        const isSeeking = [false, false, false];
-
-        function onYouTubeIframeAPIReady() {
-            videoIds.forEach((id, i) => {
-                players[i] = new YT.Player('player' + (i + 1), {
-                    videoId: id,
-                    playerVars: {
-                        controls: 0,
-                        modestbranding: 1,
-                        rel: 0,
-                        fs: 0,
-                        showinfo: 0,
-                        iv_load_policy: 3,
-                        disablekb: 0
-                    },
-                    events: {
-                        onStateChange: (e) => onPlayerStateChange(e, i)
-                    }
-                });
-            });
-        }
-
-        function onPlayerStateChange(event, i) {
-            const btn = document.getElementById('btn' + (i + 1));
-            if (event.data === YT.PlayerState.PLAYING) {
-                btn.textContent = '⏸ Pause';
-            } else {
-                btn.textContent = '▶ Play';
-            }
-        }
-
-        function togglePlay(i) {
-            const p = players[i];
-            if (!p) return;
-            const state = p.getPlayerState();
-            if (state === YT.PlayerState.PLAYING) {
-                p.pauseVideo();
-            } else {
-                p.playVideo();
-            }
-        }
-
-        function seekVideo(i, value) {
-            const p = players[i];
-            if (!p) return;
-            const duration = p.getDuration();
-            if (!duration) return;
-            const time = (value / 1000) * duration;
-            p.seekTo(time, true);
-        }
-
-        function formatTime(seconds) {
-            const m = Math.floor(seconds / 60);
-            const s = Math.floor(seconds % 60).toString().padStart(2, '0');
-            return m + ':' + s;
-        }
-
-        setInterval(() => {
-            players.forEach((p, i) => {
-                if (!p || typeof p.getCurrentTime !== 'function') return;
-                const current = p.getCurrentTime() || 0;
-                const duration = p.getDuration() || 0;
-                const slider = document.getElementById('slider' + (i + 1));
-                const timeEl = document.getElementById('time' + (i + 1));
-                if (slider && !isSeeking[i] && duration > 0) {
-                    slider.value = (current / duration) * 1000;
-                }
-                if (timeEl && duration > 0) {
-                    timeEl.textContent = formatTime(current) + ' / ' + formatTime(duration);
-                }
-            });
-        }, 500);
-
-        // Prevent slider drag from jumping during mousemove
-        document.querySelectorAll('.seek-slider').forEach((slider, i) => {
-            slider.addEventListener('mousedown', () => { isSeeking[i] = true; });
-            slider.addEventListener('touchstart', () => { isSeeking[i] = true; });
-            slider.addEventListener('mouseup', () => { isSeeking[i] = false; });
-            slider.addEventListener('touchend', () => { isSeeking[i] = false; });
-        });
-    </script>
-    <script src="translations.js"></script>
+    <script src="gallery.js"></script>
+    <script src="lang.js"></script>
+    <script src="video.js"></script>
 </body>
 
 </html>

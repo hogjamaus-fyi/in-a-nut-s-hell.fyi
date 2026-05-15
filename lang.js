@@ -127,29 +127,19 @@
     }
 
     function pageEntries(page) {
-        var commonVideoLabels = [
-            {
-                type: "text",
-                selector: ".play-btn",
-                all: true,
-                value: { en: "▶ Play", fr: "▶ Lire" }
-            }
-        ];
-
         var map = {
             "index.html": [
                 { type: "attr", selector: "title", attr: "text", value: { en: "in-a-nut-shell.fyi | Curated Links, Videos, and Digital Art", fr: "in-a-nut-shell.fyi | Liens, videos et art numerique" } },
                 { type: "text", selector: "main.link-cloud > p", value: { en: "sometimes... you know... i think... if.. that's probably...", fr: "parfois... tu sais... je pense... si... c'est probablement..." } },
                 { type: "text", selector: ".links li:nth-child(1) a", value: { en: "For Simple Navigation [embedded]", fr: "Pour une navigation simple [integre]" } },
-                { type: "text", selector: ".links li:nth-child(2) a", value: { en: "Simple Navigation [embedded]", fr: "Navigation simple [integre]" } },
-                { type: "text", selector: ".links li:nth-child(3) a", value: { en: "emoji hell to heaven summary [fun]", fr: "resume emoji de l'enfer au paradis [amusant]" } },
-                { type: "text", selector: ".links li:nth-child(4) a", value: { en: "pewdie mars - bruno pie! [YouTube Playlist] [historical]", fr: "pewdie mars - bruno pie! [Liste YouTube] [historique]" } },
-                { type: "text", selector: ".links li:nth-child(5) a", value: { en: "He Is Legend Mouck Shudow [YouTube] [historical]", fr: "He Is Legend Mouck Shudow [YouTube] [historique]" } },
-                { type: "text", selector: ".links li:nth-child(6) a", value: { en: "Kuna Anta My Heart [YouTube]", fr: "Kuna Anta My Heart [YouTube]" } },
-                { type: "text", selector: ".links li:nth-child(7) a", value: { en: "hack the universe [YouTube Playlist]", fr: "pirater l'univers [Liste YouTube]" } },
-                { type: "text", selector: ".links li:nth-child(8) a", value: { en: "posts, toasts and roasts [Twitter]", fr: "posts, toasts et roasts [Twitter]" } },
-                { type: "text", selector: ".links li:nth-child(9) a", value: { en: "big genius ai [GitHub preview]", fr: "big genius ai [apercu GitHub]" } },
-                { type: "text", selector: ".links li:nth-child(10) a", value: { en: "chessnuts [chess] [bing chillin] [YouTube]", fr: "chessnuts [echecs] [bing chillin] [YouTube]" } }
+                { type: "text", selector: ".links li:nth-child(2) a", value: { en: "emoji hell to heaven summary [fun]", fr: "resume emoji de l'enfer au paradis [amusant]" } },
+                { type: "text", selector: ".links li:nth-child(3) a", value: { en: "pewdie mars - bruno pie! [YouTube Playlist] [historical]", fr: "pewdie mars - bruno pie! [Liste YouTube] [historique]" } },
+                { type: "text", selector: ".links li:nth-child(4) a", value: { en: "He Is Legend Mouck Shudow [YouTube] [historical]", fr: "He Is Legend Mouck Shudow [YouTube] [historique]" } },
+                { type: "text", selector: ".links li:nth-child(5) a", value: { en: "Kuna Anta My Heart [YouTube]", fr: "Kuna Anta My Heart [YouTube]" } },
+                { type: "text", selector: ".links li:nth-child(6) a", value: { en: "hack the universe [YouTube Playlist]", fr: "pirater l'univers [Liste YouTube]" } },
+                { type: "text", selector: ".links li:nth-child(7) a", value: { en: "posts, toasts and roasts [Twitter]", fr: "posts, toasts et roasts [Twitter]" } },
+                { type: "text", selector: ".links li:nth-child(8) a", value: { en: "big genius ai [GitHub preview]", fr: "big genius ai [apercu GitHub]" } },
+                { type: "text", selector: ".links li:nth-child(9) a", value: { en: "chessnuts [chess] [bing chillin] [YouTube]", fr: "chessnuts [echecs] [bing chillin] [YouTube]" } }
             ],
             "embedded.html": [
                 { type: "attr", selector: "title", attr: "text", value: { en: "Embedded Content | in-a-nut-shell.fyi", fr: "Contenu integre | in-a-nut-shell.fyi" } },
@@ -214,15 +204,15 @@
                 { type: "text", selector: "header.header p", value: { en: "Featured Video", fr: "Video en vedette" } },
                 { type: "attr", selector: "nav.back-link", attr: "aria-label", value: { en: "Breadcrumb", fr: "Fil d'ariane" } },
                 { type: "attr", selector: ".iframe-wrapper", attr: "aria-label", value: { en: "Chessnuts video player", fr: "Lecteur video Chessnuts" } },
-                { type: "attr", selector: ".controls", attr: "aria-label", value: { en: "Video playback controls", fr: "Controles de lecture video" } }
-            ].concat(commonVideoLabels),
+                { type: "attr", selector: ".legend-player-controls", attr: "aria-label", value: { en: "Video playback controls", fr: "Controles de lecture video" } }
+            ],
             "hack-the-universe.html": [
                 { type: "attr", selector: "title", attr: "text", value: { en: "Hack the Universe Playlist | in-a-nut-shell.fyi", fr: "Hack the Universe Playlist | in-a-nut-shell.fyi" } },
                 { type: "attr", selector: "meta[name='description']", attr: "content", value: { en: "Watch the Hack the Universe playlist: a curated set of YouTube videos.", fr: "Regardez la playlist Hack the Universe : une selection de videos YouTube." } },
                 { type: "text", selector: ".back-link a", value: { en: "← Back", fr: "← Retour" } },
                 { type: "text", selector: ".header h1", value: { en: "hack the universe", fr: "pirater l'univers" } },
                 { type: "text", selector: ".header p", value: { en: "YouTube Playlist", fr: "Liste YouTube" } }
-            ].concat(commonVideoLabels),
+            ],
             "he-is-legend.html": [
                 { type: "attr", selector: "title", attr: "text", value: { en: "He Is Legend - Mouck Shudow | in-a-nut-shell.fyi", fr: "He Is Legend - Mouck Shudow | in-a-nut-shell.fyi" } },
                 { type: "attr", selector: "meta[name='description']", attr: "content", value: { en: "He Is Legend - Mouck Shudow. Watch the featured YouTube video.", fr: "He Is Legend - Mouck Shudow. Regardez la video YouTube en vedette." } },
@@ -231,8 +221,8 @@
                 { type: "text", selector: "header.header p", value: { en: "Legendary YouTube Content", fr: "Contenu YouTube legendaire" } },
                 { type: "attr", selector: "nav.back-link", attr: "aria-label", value: { en: "Breadcrumb", fr: "Fil d'ariane" } },
                 { type: "attr", selector: ".iframe-wrapper", attr: "aria-label", value: { en: "He Is Legend - Mouck Shudow video player", fr: "Lecteur video He Is Legend - Mouck Shudow" } },
-                { type: "attr", selector: ".controls", attr: "aria-label", value: { en: "Video playback controls", fr: "Controles de lecture video" } }
-            ].concat(commonVideoLabels),
+                { type: "attr", selector: ".legend-player-controls", attr: "aria-label", value: { en: "Video playback controls", fr: "Controles de lecture video" } }
+            ],
             "kun-anta.html": [
                 { type: "attr", selector: "title", attr: "text", value: { en: "Kun Anta | in-a-nut-shell.fyi", fr: "Kun Anta | in-a-nut-shell.fyi" } },
                 { type: "attr", selector: "meta[name='description']", attr: "content", value: { en: "Watch Kun Anta: featured YouTube video with an emotional and poetic atmosphere.", fr: "Regardez Kun Anta : video YouTube en vedette avec une atmosphere emotionnelle et poetique." } },
@@ -242,14 +232,14 @@
                 { type: "attr", selector: ".seo-copy", attr: "aria-label", value: { en: "About this video", fr: "A propos de cette video" } },
                 { type: "text", selector: ".seo-copy h2", value: { en: "About Kun Anta", fr: "A propos de Kun Anta" } },
                 { type: "text", selector: ".seo-copy p", value: { en: "Based on the available public metadata and thumbnail for Kun - Anta (by Austin James Hogan), the video appears to be a short, mood-driven piece centered on love and emotional connection, using simple symbolic visuals like two hands forming a heart shape against the sky and stylized script text to create a poetic, reflective tone; overall, it feels more like an aesthetic or lyrical visual moment than a plot-heavy narrative, emphasizing feeling, intimacy, and atmosphere over detailed storytelling.", fr: "D'apres les metadonnees publiques et la miniature disponibles pour Kun - Anta (par Austin James Hogan), la video semble etre une piece courte et emotive centree sur l'amour et la connexion emotionnelle, avec des visuels symboliques simples comme deux mains formant un coeur devant le ciel et un texte stylise pour creer un ton poetique et reflexif ; globalement, elle ressemble plus a un moment visuel esthetique ou lyrique qu'a un recit riche en intrigue, et met l'accent sur le ressenti, l'intimite et l'atmosphere." } }
-            ].concat(commonVideoLabels),
+            ],
             "pewdie-mars.html": [
-                { type: "attr", selector: "title", attr: "text", value: { en: "Pewdie Mars - Bruno Pie Playlist | in-a-nut-shell.fyi", fr: "Pewdie Mars - Bruno Pie Playlist | in-a-nut-shell.fyi" } },
+                { type: "attr", selector: "title", attr: "text", value: { en: "Pewdie Mars - Bruno Pie Playlist | in-a-nut-shell.fyi", fr: "Pewdie Mars - Bruno Pie Liste YouTube | in-a-nut-shell.fyi" } },
                 { type: "attr", selector: "meta[name='description']", attr: "content", value: { en: "Watch the Pewdie Mars - Bruno Pie historical playlist on YouTube.", fr: "Regardez la playlist historique Pewdie Mars - Bruno Pie sur YouTube." } },
                 { type: "text", selector: ".back-link a", value: { en: "← Back", fr: "← Retour" } },
                 { type: "text", selector: ".header h1", value: { en: "pewdie mars - bruno pie! [historical]", fr: "pewdie mars - bruno pie! [historique]" } },
                 { type: "text", selector: ".header p", value: { en: "YouTube Playlist", fr: "Liste YouTube" } }
-            ].concat(commonVideoLabels)
+            ]
         };
 
         return map[page] || [];
@@ -268,34 +258,6 @@
                 .replace("Featured Video", "Video en vedette")
                 .replace("Playlist", "Liste");
         }
-    }
-
-    function updatePlayButtonsForLang(lang) {
-        var nodes = document.querySelectorAll(".play-btn");
-        nodes.forEach(function (btn) {
-            var txt = btn.textContent || "";
-            var isPauseState = txt.indexOf("⏸") !== -1 || /pause/i.test(txt);
-            if (isPauseState) {
-                btn.textContent = "⏸ Pause";
-            } else {
-                btn.textContent = lang === "fr" ? "▶ Lire" : "▶ Play";
-            }
-        });
-    }
-
-    function installPlayButtonObserver() {
-        var root = document.body;
-        if (!root || !window.MutationObserver) return;
-
-        var observer = new MutationObserver(function () {
-            updatePlayButtonsForLang(currentLang);
-        });
-
-        observer.observe(root, {
-            subtree: true,
-            childList: true,
-            characterData: true
-        });
     }
 
     function mountLanguageSwitcher(initialLang, onChange) {
@@ -385,6 +347,27 @@
         window.history.replaceState({}, "", url.toString());
     }
 
+    function syncSeoUrlsForLang(lang) {
+        var page = getPageName();
+        var origin = window.location.origin;
+        if (!origin || origin === "null") return;
+
+        var url = new URL(origin + "/" + page);
+        if (lang === "fr") {
+            url.searchParams.set("lang", "fr");
+        }
+
+        var canonical = document.querySelector("link[rel='canonical']");
+        if (canonical) {
+            canonical.setAttribute("href", url.toString());
+        }
+
+        var ogUrl = document.querySelector("meta[property='og:url']");
+        if (ogUrl) {
+            ogUrl.setAttribute("content", url.toString());
+        }
+    }
+
     function applyLanguage(lang) {
         var page = getPageName();
         currentLang = lang;
@@ -393,9 +376,16 @@
         setAttr("meta[property='og:locale']", "content", lang === "fr" ? "fr_FR" : "en_US");
         applyEntries(pageEntries(page), lang);
         applyDocumentTitleFallback(lang);
-        updatePlayButtonsForLang(lang);
         setLangParamWithoutReload(lang);
+        syncSeoUrlsForLang(lang);
         saveLang(lang);
+
+        document.dispatchEvent(new CustomEvent("site:langchange", {
+            detail: {
+                lang: lang,
+                page: page
+            }
+        }));
     }
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -407,7 +397,6 @@
         }
 
         applyLanguage(lang);
-        installPlayButtonObserver();
 
         mountLanguageSwitcher(lang, function (nextLang) {
             lang = nextLang;

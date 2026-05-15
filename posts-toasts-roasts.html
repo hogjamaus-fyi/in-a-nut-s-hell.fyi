@@ -251,59 +251,8 @@
         </div>
     </div>
 
-    <script>
-        // Gallery lightbox functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const galleryThumbs = document.querySelectorAll('.gallery-thumb');
-            const lightboxModal = document.getElementById('lightbox-modal');
-            const lightboxImage = document.getElementById('lightbox-image');
-            const lightboxClose = document.querySelector('.lightbox-close');
-            const images = Array.from(galleryThumbs).map(thumb => thumb.src);
-            let currentIndex = 0;
-
-            // Open lightbox on thumbnail click
-            galleryThumbs.forEach((thumb, index) => {
-                thumb.addEventListener('click', function() {
-                    currentIndex = index;
-                    lightboxImage.src = thumb.src;
-                    lightboxModal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                });
-            });
-
-            // Close lightbox on close button click
-            lightboxClose.addEventListener('click', closeLightbox);
-
-            // Close lightbox on background click
-            lightboxModal.addEventListener('click', function(e) {
-                if (e.target === lightboxModal) {
-                    closeLightbox();
-                }
-            });
-
-            // Close lightbox function
-            function closeLightbox() {
-                lightboxModal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-
-            // Keyboard navigation
-            document.addEventListener('keydown', function(e) {
-                if (!lightboxModal.classList.contains('active')) return;
-                
-                if (e.key === 'Escape') {
-                    closeLightbox();
-                } else if (e.key === 'ArrowRight') {
-                    currentIndex = (currentIndex + 1) % images.length;
-                    lightboxImage.src = images[currentIndex];
-                } else if (e.key === 'ArrowLeft') {
-                    currentIndex = (currentIndex - 1 + images.length) % images.length;
-                    lightboxImage.src = images[currentIndex];
-                }
-            });
-        });
-    </script>
-    <script src="translations.js"></script>
+    <script src="gallery.js"></script>
+    <script src="lang.js"></script>
 </body>
 
 </html>
