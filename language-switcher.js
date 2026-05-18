@@ -282,7 +282,7 @@
     function mountLanguageSwitcher(initialLang, onChange) {
         var switcher = document.createElement("div");
         switcher.setAttribute("aria-label", "Language Switcher");
-        switcher.id = "lang-switcher-safe";
+        switcher.id = "languageer-safe";
 
         var enBtn = document.createElement("button");
         enBtn.type = "button";
@@ -326,7 +326,7 @@
     function installSwitcherStyles() {
         var style = document.createElement("style");
         style.textContent = [
-            "#lang-switcher-safe {",
+            "#languageer-safe {",
             "  position: fixed;",
             "  right: 14px;",
             "  bottom: 14px;",
@@ -339,7 +339,7 @@
             "  border: 1px solid rgba(255,255,255,0.24);",
             "  backdrop-filter: blur(4px);",
             "}",
-            "#lang-switcher-safe button {",
+            "#languageer-safe button {",
             "  border: 1px solid rgba(255,255,255,0.25);",
             "  background: rgba(255,255,255,0.08);",
             "  color: #fff;",
@@ -348,12 +348,12 @@
             "  font: 600 12px/1 sans-serif;",
             "  cursor: pointer;",
             "}",
-            "#lang-switcher-safe button.active {",
+            "#languageer-safe button.active {",
             "  background: #fff;",
             "  color: #111;",
             "}",
             "@media (max-width: 640px) {",
-            "  #lang-switcher-safe { right: 10px; bottom: 10px; }",
+            "  #languageer-safe { right: 10px; bottom: 10px; }",
             "}"
         ].join("\n");
 
