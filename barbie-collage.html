@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>Barbiecore Collage Carousel | in-a-nut-shell.fyi</title>
+    <meta name="description" content="A cute pink collage that opens into a swipeable carousel of the latest tweet snapshots.">
+    <meta name="theme-color" content="#ff4fa3">
+    <style>
+        :root {
+            --pink-100: #ffe9f6;
+            --pink-300: #ffb6de;
+            --pink-500: #ff6bb9;
+            --pink-700: #de2b84;
+            --berry: #7a2054;
+            --white-soft: #fff8fd;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            min-height: 100%;
+            font-family: "Fredoka", "Trebuchet MS", sans-serif;
+            background:
+                radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.7), transparent 40%),
+                radial-gradient(circle at 85% 20%, rgba(255, 220, 243, 0.9), transparent 45%),
+                linear-gradient(140deg, #ffecf8, #ffd3eb 45%, #ffb7dc 100%);
+            color: var(--berry);
+        }
+
+        .wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 18px 40px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 8px 0 20px;
+            color: #8c2d5d;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(222, 43, 132, 0.2);
+            border-radius: 999px;
+            padding: 10px 16px;
+            font-weight: 600;
+            box-shadow: 0 8px 24px rgba(184, 53, 122, 0.14);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 12px 12px 26px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: clamp(1.7rem, 4vw, 2.7rem);
+            letter-spacing: 0.01em;
+            color: #b3136a;
+            text-shadow: 0 2px 0 rgba(255, 255, 255, 0.6);
+        }
+
+        .hero p {
+            margin: 10px auto 0;
+            max-width: 720px;
+            font-size: 1rem;
+            color: #872b5b;
+            line-height: 1.55;
+        }
+
+        .tagline {
+            margin-top: 8px;
+            font-weight: 600;
+            color: #a62767;
+        }
+
+        .collage-grid {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            grid-template-rows: repeat(8, minmax(48px, auto));
+            gap: 14px;
+            padding: 14px;
+            border-radius: 24px;
+            background: linear-gradient(160deg, rgba(255, 255, 255, 0.78), rgba(255, 240, 248, 0.72));
+            border: 1px solid rgba(255, 127, 185, 0.3);
+            box-shadow: 0 18px 46px rgba(173, 30, 102, 0.18);
+        }
+
+        .tile {
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            transform: rotate(var(--tilt));
+            transition: transform 0.22s ease, box-shadow 0.22s ease;
+            box-shadow: 0 10px 28px rgba(129, 25, 75, 0.22);
+            background: #fff;
+        }
+
+        .tile:hover {
+            transform: rotate(0deg) translateY(-4px) scale(1.02);
+            box-shadow: 0 16px 34px rgba(129, 25, 75, 0.3);
+        }
+
+        .tile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            cursor: pointer;
+        }
+
+        .tile .caption {
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background: rgba(255, 248, 253, 0.86);
+            border: 1px solid rgba(255, 107, 185, 0.33);
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-size: 0.78rem;
+            text-align: center;
+            font-weight: 600;
+            color: #9b1d61;
+        }
+
+        .tile-1 {
+            --tilt: -2.7deg;
+            grid-column: 1 / span 4;
+            grid-row: 1 / span 4;
+        }
+
+        .tile-2 {
+            --tilt: 2deg;
+            grid-column: 5 / span 4;
+            grid-row: 1 / span 3;
+        }
+
+        .tile-3 {
+            --tilt: -1.2deg;
+            grid-column: 9 / span 4;
+            grid-row: 1 / span 5;
+        }
+
+        .tile-4 {
+            --tilt: 1.8deg;
+            grid-column: 1 / span 6;
+            grid-row: 5 / span 4;
+        }
+
+        .tile-5 {
+            --tilt: -1.7deg;
+            grid-column: 7 / span 6;
+            grid-row: 6 / span 3;
+        }
+
+        .hint {
+            margin: 16px auto 0;
+            text-align: center;
+            color: #8b2c5d;
+            font-size: 0.92rem;
+            font-weight: 600;
+        }
+
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(61, 8, 38, 0.94);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .lightbox-modal.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 92vw;
+            max-height: 90vh;
+            animation: zoomIn 0.28s ease;
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.92);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        #lightbox-image {
+            max-width: 100%;
+            max-height: 88vh;
+            border-radius: 14px;
+            border: 2px solid rgba(255, 190, 225, 0.45);
+            box-shadow: 0 18px 42px rgba(0, 0, 0, 0.35);
+            display: block;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -46px;
+            right: 0;
+            width: 44px;
+            height: 44px;
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+            background: rgba(255, 107, 185, 0.8);
+            font-size: 1.7rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 850px) {
+            .collage-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-template-rows: auto;
+            }
+
+            .tile,
+            .tile:hover {
+                grid-column: auto;
+                grid-row: auto;
+                transform: none;
+            }
+
+            .tile img {
+                aspect-ratio: 4 / 3;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="wrap">
+        <a class="back-link" href="embedded.html">← Retour</a>
+
+        <section class="hero">
+            <h1>Barbiecore Memory Board</h1>
+            <p>Five latest tweet snapshots, sorted by date in the PNG filename, styled like a sticker collage. Tap any tile to open the carousel.</p>
+            <p class="tagline">Come on Barbie, let us go party... in a responsible image gallery.</p>
+        </section>
+
+        <section class="collage-grid" aria-label="Barbie collage gallery">
+            <div class="tile tile-1">
+                <img class="gallery-thumb" data-index="0" src="tweet-2056495351402578133.png" alt="tweet image 1">
+                <span class="caption">Pink alert level: iconic</span>
+            </div>
+            <div class="tile tile-2">
+                <img class="gallery-thumb" data-index="1" src="tweet-2056495569963471007.png" alt="tweet image 2">
+                <span class="caption">Main character energy only</span>
+            </div>
+            <div class="tile tile-3">
+                <img class="gallery-thumb" data-index="2" src="tweet-2056495837518143913.png" alt="tweet image 3">
+                <span class="caption">This dreamhouse has receipts</span>
+            </div>
+            <div class="tile tile-4">
+                <img class="gallery-thumb" data-index="3" src="tweet-2056495995337195791.png" alt="tweet image 4">
+                <span class="caption">Glossy, bossy, and unbothered</span>
+            </div>
+            <div class="tile tile-5">
+                <img class="gallery-thumb" data-index="4" src="tweet-2056497017958940728.png" alt="tweet image 5">
+                <span class="caption">Newest sparkle in the lineup</span>
+            </div>
+        </section>
+
+        <p class="hint">Use arrow keys in the modal to move through the carousel.</p>
+
+        <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true">
+            <div class="lightbox-content">
+                <img id="lightbox-image" src="" alt="enlarged tweet image">
+                <button class="lightbox-close" type="button" aria-label="Close image">×</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="gallery.js"></script>
+    <script src="lang-switch.js"></script>
+</body>
+
+</html>

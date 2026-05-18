@@ -139,7 +139,8 @@
                 { type: "text", selector: ".links li:nth-child(6) a", value: { en: "hack the universe [YouTube Playlist]", fr: "pirater l'univers [Liste YouTube]" } },
                 { type: "text", selector: ".links li:nth-child(7) a", value: { en: "posts, toasts and roasts [Twitter]", fr: "posts, toasts et roasts [Twitter]" } },
                 { type: "text", selector: ".links li:nth-child(8) a", value: { en: "big genius ai [GitHub preview]", fr: "big genius ai [apercu GitHub]" } },
-                { type: "text", selector: ".links li:nth-child(9) a", value: { en: "chessnuts [chess] [bing chillin] [YouTube]", fr: "chessnuts [echecs] [bing chillin] [YouTube]" } }
+                { type: "text", selector: ".links li:nth-child(9) a", value: { en: "chessnuts [chess] [bing chillin] [YouTube]", fr: "chessnuts [echecs] [bing chillin] [YouTube]" } },
+                { type: "text", selector: ".links li:nth-child(10) a", value: { en: "barbiecore collage [pink carousel]", fr: "collage barbiecore [carrousel rose]" } }
             ],
             "embedded.html": [
                 { type: "attr", selector: "title", attr: "text", value: { en: "Embedded Content | in-a-nut-shell.fyi", fr: "Contenu integre | in-a-nut-shell.fyi" } },
@@ -151,7 +152,25 @@
                 { type: "text", selector: ".links li:nth-child(5) a", value: { en: "hack the universe [YouTube Playlist]", fr: "pirater l'univers [Liste YouTube]" } },
                 { type: "text", selector: ".links li:nth-child(6) a", value: { en: "posts, toasts and roasts [Twitter]", fr: "posts, toasts et rotis [Twitter]" } },
                 { type: "text", selector: ".links li:nth-child(7) a", value: { en: "big genius ai [GitHub preview]", fr: "big genius ai [apercu GitHub]" } },
-                { type: "text", selector: ".links li:nth-child(8) a", value: { en: "chessnuts [chess] [bing chillin] [YouTube]", fr: "chessnuts [echecs] [bing chillin] [YouTube]" } }
+                { type: "text", selector: ".links li:nth-child(8) a", value: { en: "chessnuts [chess] [bing chillin] [YouTube]", fr: "chessnuts [echecs] [bing chillin] [YouTube]" } },
+                { type: "text", selector: ".links li:nth-child(9) a", value: { en: "barbiecore collage [pink carousel]", fr: "collage barbiecore [carrousel rose]" } }
+            ],
+            "barbie-collage.html": [
+                { type: "attr", selector: "title", attr: "text", value: { en: "Barbiecore Collage Carousel | in-a-nut-shell.fyi", fr: "Collage Barbiecore Carrousel | in-a-nut-shell.fyi" } },
+                { type: "attr", selector: "meta[name='description']", attr: "content", value: { en: "A cute pink collage that opens into a swipeable carousel of the latest tweet snapshots.", fr: "Un collage rose et mignon qui s'ouvre en carrousel navigable avec les dernieres captures de tweets." } },
+                { type: "text", selector: ".back-link", value: { en: "← Back", fr: "← Retour" } },
+                { type: "text", selector: ".hero h1", value: { en: "Barbiecore Memory Board", fr: "Tableau Memoire Barbiecore" } },
+                { type: "text", selector: ".hero p:nth-of-type(1)", value: { en: "Five latest tweet snapshots, sorted by date in the PNG filename, styled like a sticker collage. Tap any tile to open the carousel.", fr: "Cinq captures de tweets recentes, triees par date dans le nom du fichier PNG, presentees comme un collage d'autocollants. Touchez une vignette pour ouvrir le carrousel." } },
+                { type: "text", selector: ".hero p.tagline", value: { en: "Come on Barbie, let us go party... in a responsible image gallery.", fr: "Allez Barbie, on va faire la fete... dans une galerie d'images responsable." } },
+                { type: "attr", selector: ".collage-grid", attr: "aria-label", value: { en: "Barbie collage gallery", fr: "Galerie collage Barbie" } },
+                { type: "text", selector: ".tile-1 .caption", value: { en: "Pink alert level: iconic", fr: "Niveau d'alerte rose : iconique" } },
+                { type: "text", selector: ".tile-2 .caption", value: { en: "Main character energy only", fr: "Energie personnage principal uniquement" } },
+                { type: "text", selector: ".tile-3 .caption", value: { en: "This dreamhouse has receipts", fr: "Cette dreamhouse garde les preuves" } },
+                { type: "text", selector: ".tile-4 .caption", value: { en: "Glossy, bossy, and unbothered", fr: "Brillante, bossy et imperturbable" } },
+                { type: "text", selector: ".tile-5 .caption", value: { en: "Newest sparkle in the lineup", fr: "Le plus recent eclat de la serie" } },
+                { type: "text", selector: ".hint", value: { en: "Use arrow keys in the modal to move through the carousel.", fr: "Utilisez les fleches dans la fenetre pour parcourir le carrousel." } },
+                { type: "attr", selector: "#lightbox-image", attr: "alt", value: { en: "enlarged tweet image", fr: "image de tweet agrandie" } },
+                { type: "attr", selector: ".lightbox-close", attr: "aria-label", value: { en: "Close image", fr: "Fermer l'image" } }
             ],
             "404.html": [
                 { type: "attr", selector: "title", attr: "text", value: { en: "404 | Page Not Found | in-a-nut-shell.fyi", fr: "404 | Page introuvable | in-a-nut-shell.fyi" } },
