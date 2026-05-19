@@ -19,13 +19,13 @@
     <meta property="og:description" content="A cute pink collage that opens into a swipeable carousel of the latest tweet snapshots.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://in-a-nut-shell.fyi/barbie-collage.html">
-    <meta property="og:image" content="https://in-a-nut-shell.fyi/tweet-2056495351402578133.png">
+    <meta property="og:image" content="https://in-a-nut-shell.fyi/tweet-2056495351402578133.jpg">
     <meta property="og:image:alt" content="Barbiecore collage preview featuring pink-toned tweet snapshots.">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Barbiecore Collage Carousel | in-a-nut-shell.fyi">
     <meta name="twitter:description" content="A cute pink collage that opens into a swipeable carousel of the latest tweet snapshots.">
-    <meta name="twitter:image" content="https://in-a-nut-shell.fyi/tweet-2056495351402578133.png">
+    <meta name="twitter:image" content="https://in-a-nut-shell.fyi/tweet-2056495351402578133.jpg">
 
     <script type="application/ld+json">
         {
@@ -201,6 +201,80 @@
             font-weight: 600;
         }
 
+        .sparkle-banner {
+            display: block;
+            width: min(760px, 100%);
+            margin: 18px auto 0;
+            border: 1px solid rgba(178, 22, 103, 0.35);
+            border-radius: 999px;
+            padding: 14px 20px;
+            background: linear-gradient(120deg, #ff4ea7, #ff7fc5 45%, #ffb5dd);
+            color: #fff9fe;
+            font: inherit;
+            font-weight: 700;
+            font-size: clamp(0.96rem, 2.2vw, 1.08rem);
+            letter-spacing: 0.015em;
+            text-shadow: 0 1px 2px rgba(101, 16, 63, 0.5);
+            cursor: pointer;
+            box-shadow: 0 12px 28px rgba(190, 35, 120, 0.32);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .sparkle-banner:hover {
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 0 16px 34px rgba(190, 35, 120, 0.4);
+        }
+
+        .sparkle-banner:focus-visible {
+            outline: 3px solid #ffd2eb;
+            outline-offset: 2px;
+        }
+
+        .pink-guy-panel {
+            display: none;
+            margin: 16px auto 0;
+            width: min(760px, 100%);
+            border-radius: 22px;
+            border: 1px solid rgba(194, 44, 121, 0.35);
+            background: linear-gradient(155deg, rgba(255, 248, 253, 0.95), rgba(255, 232, 245, 0.9));
+            box-shadow: 0 16px 34px rgba(134, 24, 79, 0.18);
+            padding: 12px;
+        }
+
+        .pink-guy-panel.active {
+            display: block;
+            animation: popIn 0.28s ease;
+        }
+
+        @keyframes popIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px) scale(0.985);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .pink-guy-image {
+            width: 100%;
+            display: block;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 117, 188, 0.45);
+            box-shadow: 0 10px 22px rgba(136, 26, 80, 0.22);
+            cursor: zoom-in;
+        }
+
+        .pink-guy-note {
+            margin: 10px 0 2px;
+            text-align: center;
+            color: #9d1f63;
+            font-size: 0.94rem;
+            font-weight: 600;
+        }
+
         .lightbox-modal {
             display: none;
             position: fixed;
@@ -274,6 +348,10 @@
             .tile img {
                 aspect-ratio: 4 / 3;
             }
+
+            .sparkle-banner {
+                border-radius: 24px;
+            }
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -293,28 +371,37 @@
 
         <section class="collage-grid" aria-label="Barbie collage gallery">
             <div class="tile tile-1">
-                <img class="gallery-thumb" data-index="0" src="tweet-2056495351402578133.png" alt="Latest tweet snapshot in Barbiecore pink collage style">
+                <img class="gallery-thumb" data-index="0" src="tweet-2056495351402578133.jpg" alt="Latest tweet snapshot in Barbiecore pink collage style">
                 <span class="caption">Pink alert level: iconic</span>
             </div>
             <div class="tile tile-2">
-                <img class="gallery-thumb" data-index="1" src="tweet-2056495569963471007.png" alt="Second tweet snapshot in glossy pink collage layout">
+                <img class="gallery-thumb" data-index="1" src="tweet-2056495569963471007.jpg" alt="Second tweet snapshot in glossy pink collage layout">
                 <span class="caption">Main character energy only</span>
             </div>
             <div class="tile tile-3">
-                <img class="gallery-thumb" data-index="2" src="tweet-2056495837518143913.png" alt="Third tweet snapshot arranged as a scrapbook tile">
+                <img class="gallery-thumb" data-index="2" src="tweet-2056495837518143913.jpg" alt="Third tweet snapshot arranged as a scrapbook tile">
                 <span class="caption">This dreamhouse has receipts</span>
             </div>
             <div class="tile tile-4">
-                <img class="gallery-thumb" data-index="3" src="tweet-2056495995337195791.png" alt="Fourth tweet snapshot with Barbiecore styling and caption sticker">
+                <img class="gallery-thumb" data-index="3" src="tweet-2056495995337195791.jpg" alt="Fourth tweet snapshot with Barbiecore styling and caption sticker">
                 <span class="caption">Glossy, bossy, and unbothered</span>
             </div>
             <div class="tile tile-5">
-                <img class="gallery-thumb" data-index="4" src="tweet-2056497017958940728.png" alt="Newest tweet snapshot in the five-image Barbie collage carousel">
+                <img class="gallery-thumb" data-index="4" src="tweet-2056497017958940728.jpg" alt="Newest tweet snapshot in the five-image Barbie collage carousel">
                 <span class="caption">Newest sparkle in the lineup</span>
             </div>
         </section>
 
         <p class="hint">Use arrow keys in the modal to move through the carousel.</p>
+
+        <button id="pink-guy-banner" class="sparkle-banner" type="button" aria-expanded="false" aria-controls="pink-guy-panel">
+            Pink Surprise Button 💖🎀🌸✨🧸👛🩷
+        </button>
+
+        <section id="pink-guy-panel" class="pink-guy-panel" aria-live="polite">
+            <img class="pink-guy-image" src="pink-guy.jpg" alt="Pink guy appears in a cosmic scene with bright golden and pink tones">
+            <p class="pink-guy-note">Princess mode activated. Pink guy has arrived. 💅🌷✨</p>
+        </section>
 
         <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true">
             <div class="lightbox-content">
@@ -326,6 +413,7 @@
 
     <script src="image-gallery.js"></script>
     <script src="language-switcher.js"></script>
+    <script src="image-pink-guy.js"></script>
 </body>
 
 </html>
