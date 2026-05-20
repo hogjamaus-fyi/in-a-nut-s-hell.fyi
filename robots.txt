@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://in-a-nut-shell.fyi/sitemap.xml
+Sitemap: https://in-a-nut-s-hell.fyi/sitemap.xml

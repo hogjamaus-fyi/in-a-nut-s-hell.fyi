@@ -8,7 +8,7 @@
             "type": "firefox",
             "request": "launch",
             "name": "Open index.html",
-            "file": "/home/hogjamaus/Documents/repositories/GitHub/hogjamaus-2026-05-9-8-20/in-a-nut-shell.fyi/index.html",
+            "file": "/home/hogjamaus/Documents/repositories/GitHub/hogjamaus-2026-05-9-8-20/in-a-nut-s-hell.fyi/index.html",
             "tmpDir": "${workspaceFolder}/.tmp"
         }
     ]
