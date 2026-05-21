@@ -86,7 +86,7 @@ function getLang() {
     const lang = url.searchParams.get('lang');
     if (lang && ['en','fr','es','ar','fa','zh'].includes(lang)) return lang;
     
-    // Check localStorage (set by languages-open-menu.js)
+    // Check localStorage (set by lang-switch.js)
     const stored = window.localStorage.getItem('site_lang');
     if (stored && ['en','fr','es','ar','fa','zh'].includes(stored)) return stored;
     
@@ -188,7 +188,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Listen for language changes from languages-open-menu.js
+    // Listen for language changes from lang-switch.js
     document.addEventListener('site:langchange', (event) => {
         updateCarousel();
     });
