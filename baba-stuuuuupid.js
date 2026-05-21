@@ -48,7 +48,7 @@
         {
             src: "avcoscious-valor.webp",
             alt: "avcoscious-valor.webp",
-            caption: "Soulful tipsy lovense\nAs her angels covet more life\nGolden heartscorn and heartful dreamings\nShe hides me in the thicket, goodness\nThe green near Her Heart, freedom\n\nEvergrows, the wordless, timeless, moment\n\nBartollean brown, nature's warmth hiding and shying away, unbeveled roots, depth, Pastachian Blue, our time unfold wining and telling now, fathered buds, breadth, Heliotrope green, her love ebbing and flowing allwhere, oft'freed thriving and sifting always, petaled flowers.\n\nUnto and the narrow straight, her\nUpto and the tall wondercore, him\n\nAvcoscious Valor by Baba",
+            caption: "Soulful beloved merry\nAs her angels covet more life\nGolden heartscorn and heartful dreamings\nShe hides me in the thicket, goodness\nThe green near Her Heart, freedom\n\nEvergrows, the wordless, timeless, moment\n\nBartollean brown, nature's warmth hiding and shying away, unbeveled roots, depth, Pastachian Blue, our time unfold wining and telling now, fathered buds, breadth, Heliotrope green, her love ebbing and flowing allwhere, oft'freed thriving and sifting always, petaled flowers.\n\nUnto and the narrow straight, her\nUpto and the tall wondercore, him\n\nAvcoscious Valor by Baba",
             width: 896,
             height: 1195
         },
@@ -68,7 +68,7 @@
             "(ce n'est pas un poeme)\n(t'es stuuupide beurk!!!! hm)\n\na stinky par Sep Jr.",
             "reflechis bien un et deux   [1 2]\ntrois et quatre, cinq pas plus    [3 4 5]\nmaintenant compte jusqu'a six, facile         [6]\nencore un, jusqu'a sept         [7]\nattends, maintenant j'ai huit        [8]\nneuf pour maman,                         [9]\non recommence tout, oh frere !  [10]\n\npourquoi est-il intelligent maintenant ? par Sep Jr.",
             "Presse rose, femininite errante parmi le feuillage\nDu saule et du tact comme l'epine\nLes yeux admirent sa grace givilin\nElle est frenetique et serviable\nVisible, un regime d'amour unique\nFete libre et arbre de famille\nElle est forte et parfaitement\n\nJovial Neemanthemum par Baba",
-            "Ivresse d'ame et d'amour\nAlors que ses anges convoitent plus de vie\nCoeur dore, mepris du coeur et reves pleins\nElle me cache dans le fourre, bonté\nLe vert pres de son coeur, liberte\n\nToujours en croissance, l'instant sans mots et sans temps\n\nBrun bartollean, chaleur de la nature qui se cache et s'efface, racines non biseautees, profondeur, vert heliotrope, notre temps se deploie en racontant et murmurant, bourgeons engendres, ampleur, bleu pastachian, son amour va et vient partout, souvent libere, prosperant et tamisant toujours, fleurs petalees.\n\nVers l'etroit chemin droit, elle\nVers le haut noyau de merveille, lui\n\nAvcoscious Valor par Baba",
+            "Joyeuse bien-aimee de l'ame\nAlors que ses anges convoitent plus de vie\nCoeur dore, mepris du coeur et reves pleins\nElle me cache dans le fourre, bonté\nLe vert pres de son coeur, liberte\n\nToujours en croissance, l'instant sans mots et sans temps\n\nBrun bartollean, chaleur de la nature qui se cache et s'efface, racines non biseautees, profondeur, vert heliotrope, notre temps se deploie en racontant et murmurant, bourgeons engendres, ampleur, bleu pastachian, son amour va et vient partout, souvent libere, prosperant et tamisant toujours, fleurs petalees.\n\nVers l'etroit chemin droit, elle\nVers le haut noyau de merveille, lui\n\nAvcoscious Valor par Baba",
             SEP_KUN_ANTA_POEM_FR
         ],
         es: [
@@ -77,7 +77,7 @@
             "(eso no es un poema)\n(eres estuuuupido puaj!!!! hm)\n\na stinky por Sep Jr.",
             "piensalo bien uno y dos   [1 2]\ntres y cuatro, cinco no mas    [3 4 5]\nahora cuenta hasta seis, facil         [6]\notro mas, hasta siete         [7]\nespera, ahora tengo ocho        [8]\nnueve para mama,                         [9]\ncomenzamos de nuevo, oh hermano!  [10]\n\npor que es inteligente ahora? por Sep Jr.",
             "Rosa prensada, feminidad errante entre follaje\nDel sauce y el tacto como la espina\nLos ojos admiran su gracia givilin\nElla es frenetica y servicial\nNotable, un regimen de amor de una\nFiesta libre y arbol familiar\nElla es fuerte y perfectamente\n\nJovial Neemanthemum por Baba",
-            "Amor embriagado del alma\nMientras sus angeles anhelan mas vida\nDesden dorado del corazon y suenos colmados\nElla me esconde en la maleza, bondad\nEl verde cerca de Su Corazon, libertad\n\nSiempre crece, el momento sin palabras y sin tiempo\n\nMarron bartollean, el calor de la naturaleza escondiendose y apartandose, raices sin bisel, profundidad, verde heliotropo, nuestro tiempo se despliega contando y bebiendo, brotes engendrados, amplitud, azul pastachian, su amor sube y baja por todas partes, a menudo liberado, prosperando y filtrando siempre, flores de petalos.\n\nHacia lo angosto y recto, ella\nHacia arriba y al nucleo alto de maravilla, el\n\nAvcoscious Valor por Baba",
+            "Alegre amada del alma\nMientras sus angeles anhelan mas vida\nDesden dorado del corazon y suenos colmados\nElla me esconde en la maleza, bondad\nEl verde cerca de Su Corazon, libertad\n\nSiempre crece, el momento sin palabras y sin tiempo\n\nMarron bartollean, el calor de la naturaleza escondiendose y apartandose, raices sin bisel, profundidad, verde heliotropo, nuestro tiempo se despliega contando y bebiendo, brotes engendrados, amplitud, azul pastachian, su amor sube y baja por todas partes, a menudo liberado, prosperando y filtrando siempre, flores de petalos.\n\nHacia lo angosto y recto, ella\nHacia arriba y al nucleo alto de maravilla, el\n\nAvcoscious Valor por Baba",
             SEP_KUN_ANTA_POEM_ES
         ],
         ar: [
@@ -86,7 +86,7 @@
             "(هذا ليس قصيدة)\n(أنت غبيييي مقرف!!!! هم)\n\na stinky بقلم Sep Jr.",
             "فكر فيها واحد واثنان   [1 2]\nثلاثة وأربعة، خمسة لا أكثر    [3 4 5]\nالآن عد إلى ستة، أمر سهل         [6]\nخذ واحدًا آخر، حتى سبعة         [7]\nانتظر، الآن لدي ثمانية        [8]\nتسعة للأم،                         [9]\nنبدأ من جديد، يا أخي!  [10]\n\nلماذا صار ذكيًا الآن؟ بقلم Sep Jr.",
             "وردة مضغوطة، أنوثة تائهة بين الأوراق\nمن الصفصاف واللباقة مثل الشوكة\nالعيون تتأمل نعمتها الجيفيلين\nهي مندافعة ومفيدة\nملحوظ، نظام حب لشخص واحد\nحفلة حرة وشجرة عائلة\nهي قوية وبشكل مثالي\n\nJovial Neemanthemum بقلم Baba",
-            "حب ثمل مليء بالروح\nبينما تتوق ملائكته إلى مزيد من الحياة\nقلب ذهبي وازدراء قلبي وأحلام عامرة\nتخفيني في الغيضة، يا للخير\nالخضرة قرب قلبها، حرية\n\nينمو للأبد، اللحظة بلا كلمات وبلا زمن\n\nبني بارتولي، دفء الطبيعة يختبئ ويخجل، جذور بلا حواف مشطوفة، عمق، أخضر هيليوتروب، زمننا ينفتح وهو يروي الآن، براعم مولودة، سعة، أزرق باستاشيان، حبها مد وجزر في كل مكان، متحرر غالبًا، يزدهر ويغربل دائمًا، أزهار بتلات.\n\nإلى الضيق المستقيم، هي\nإلى الأعلى وإلى نواة العجب العالية، هو\n\nAvcoscious Valor بقلم Baba",
+            "بهجة محبوبة من الروح\nبينما تتوق ملائكته إلى مزيد من الحياة\nقلب ذهبي وازدراء قلبي وأحلام عامرة\nتخفيني في الغيضة، يا للخير\nالخضرة قرب قلبها، حرية\n\nينمو للأبد، اللحظة بلا كلمات وبلا زمن\n\nبني بارتولي، دفء الطبيعة يختبئ ويخجل، جذور بلا حواف مشطوفة، عمق، أخضر هيليوتروب، زمننا ينفتح وهو يروي الآن، براعم مولودة، سعة، أزرق باستاشيان، حبها مد وجزر في كل مكان، متحرر غالبًا، يزدهر ويغربل دائمًا، أزهار بتلات.\n\nإلى الضيق المستقيم، هي\nإلى الأعلى وإلى نواة العجب العالية، هو\n\nAvcoscious Valor بقلم Baba",
             SEP_KUN_ANTA_POEM_AR
         ],
         fa: [
@@ -95,7 +95,7 @@
             "(این شعر نیست)\n(تو خییلی احمقی چندش!!!! هم)\n\na stinky از Sep Jr.",
             "با دقت فکر کن یک و دو   [1 2]\nسه و چهار، پنج دیگر نه    [3 4 5]\nحالا تا شش بشمار، آسان است         [6]\nیکی دیگر، تا هفت         [7]\nصبر کن، حالا هشت دارم        [8]\nنه برای مادر،                         [9]\nدوباره از اول شروع می کنیم، ای برادر!  [10]\n\nچرا حالا باهوش شده؟ از Sep Jr.",
             "گل رز فشرده، زنانگی سرگردان در میان شاخ و برگ\nاز بید و نزاکت همچون خار\nچشم ها به لطف گیویلین او خیره می شوند\nاو پرهیجان و یاریگر است\nنمایان، آیین عشقی یک نفره\nمهمانی آزاد و درخت خانواده\nاو نیرومند و کاملا است\n\nJovial Neemanthemum از Baba",
-            "مستی عاشقانه ی جان\nآنگاه که فرشتگانش زندگی بیشتری می طلبند\nخوارشماری زرین دل و رویاهای لبریز دل\nاو مرا در بیشه پنهان می کند، نیکی\nسبزی نزدیک قلب او، آزادی\n\nهمواره می روید، لحظه ی بی واژه و بی زمان\n\nقهوه ای بارتولین، گرمای طبیعت که پنهان و خجالتی می شود، ریشه های بی پخ، ژرفا، سبز هلیوتروپ، زمان ما اکنون با گفتن و نوشیدن گشوده می شود، جوانه های زاده، پهنا، آبی پاستاشین، عشق او همه جا جزر و مد دارد، بارها رها، همیشه شکوفا و پالاینده، گل های گلبرگ دار.\n\nسوی تنگی و راستی، او\nسوی بالا و هسته شگفتی بلند، او\n\nAvcoscious Valor از Baba",
+            "شادمانی محبوب جان\nآنگاه که فرشتگانش زندگی بیشتری می طلبند\nخوارشماری زرین دل و رویاهای لبریز دل\nاو مرا در بیشه پنهان می کند، نیکی\nسبزی نزدیک قلب او، آزادی\n\nهمواره می روید، لحظه ی بی واژه و بی زمان\n\nقهوه ای بارتولین، گرمای طبیعت که پنهان و خجالتی می شود، ریشه های بی پخ، ژرفا، سبز هلیوتروپ، زمان ما اکنون با گفتن و نوشیدن گشوده می شود، جوانه های زاده، پهنا، آبی پاستاشین، عشق او همه جا جزر و مد دارد، بارها رها، همیشه شکوفا و پالاینده، گل های گلبرگ دار.\n\nسوی تنگی و راستی، او\nسوی بالا و هسته شگفتی بلند، او\n\nAvcoscious Valor از Baba",
             SEP_KUN_ANTA_POEM_FA
         ],
         zh: [
@@ -104,7 +104,7 @@
             "（那不是诗）\n（你超超蠢，呃啊!!!! 嗯）\n\n《a stinky》作者：Sep Jr.",
             "想清楚，一和二   [1 2]\n三和四，五就到这    [3 4 5]\n现在数到六，很容易         [6]\n再来一个，到七         [7]\n等一下，现在我有八        [8]\n九给妈妈，                         [9]\n我们重来一次，哦兄弟！  [10]\n\n《他为什么现在聪明了？》作者：Sep Jr.",
             "压着玫瑰般的女性气息在叶影中游走\n像柳树与荆棘那样带着分寸\n双眼惊叹她的 givilin 优雅\n她慌忙却总在帮人\n显而易见，一人独享的爱之秩序\n自由的派对与家族树\n她强大而且完整\n\n《Jovial Neemanthemum》作者：Baba",
-            "微醺而有灵魂的爱意\n当她的天使渴求更多生命\n金色的心之轻蔑与满心梦境\n她把我藏在灌木深处，善意\n她心旁的绿色，自由\n\n永远生长，那无言、无时的瞬间\n\nBartollean 棕，大地温暖在躲藏与羞怯，无倒角的根系，深度，Heliotrope 绿，我们的时间此刻在倾诉与微醺中展开，被孕生的花苞，广度，Pastachian 蓝，她的爱在各处潮起潮落，常被释放，始终繁盛并筛落，花瓣之花。\n\n向着狭窄而笔直，她\n向上并向高耸奇想核心，他\n\n《Avcoscious Valor》作者：Baba",
+            "灵魂所爱的欢悦\n当她的天使渴求更多生命\n金色的心之轻蔑与满心梦境\n她把我藏在灌木深处，善意\n她心旁的绿色，自由\n\n永远生长，那无言、无时的瞬间\n\nBartollean 棕，大地温暖在躲藏与羞怯，无倒角的根系，深度，Heliotrope 绿，我们的时间此刻在倾诉与微醺中展开，被孕生的花苞，广度，Pastachian 蓝，她的爱在各处潮起潮落，常被释放，始终繁盛并筛落，花瓣之花。\n\n向着狭窄而笔直，她\n向上并向高耸奇想核心，他\n\n《Avcoscious Valor》作者：Baba",
             SEP_KUN_ANTA_POEM_ZH
         ]
     };

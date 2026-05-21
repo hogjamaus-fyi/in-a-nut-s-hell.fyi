@@ -30,6 +30,16 @@ const carouselData = [
         type: 'image',
         img: 'other-dragon-cup.webp',
         captionKey: 'Other Dragon Cup'
+    },
+    {
+        type: 'image',
+        img: 'train-nowayway.webp',
+        captionKey: 'Train Nowayway'
+    },
+    {
+        type: 'image',
+        img: 'cyberpunk-deathnote.webp',
+        captionKey: 'Cyberpunk Deathnote'
     }
 ];
 
