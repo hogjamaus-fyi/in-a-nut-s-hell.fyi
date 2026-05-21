@@ -3,7 +3,7 @@
 
     var SITE_ORIGIN = "https://in-a-nut-s-hell.fyi";
     var FALLBACK_DESCRIPTION = "Explore in-a-nut-s-hell.fyi: curated links, videos, and visual experiments.";
-    var FALLBACK_IMAGE = SITE_ORIGIN + "/squirrel.png";
+    var FALLBACK_IMAGE = SITE_ORIGIN + "/squirrel.webp";
     var FALLBACK_IMAGE_ALT = "Squirrel artwork from in-a-nut-s-hell.fyi";
 
     function upsertMeta(attribute, key, content) {
