@@ -53,9 +53,7 @@
             height: 1195
         },
         {
-            type: "video",
-            src: "sep-kun-anta.webm",
-            poster: "sep-kun-anta.jpg",
+            src: "sep-kun-anta.webp",
             alt: "sep-kun-anta image",
             caption: SEP_KUN_ANTA_POEM,
             width: 1280,
@@ -125,7 +123,6 @@
 
     const modal = document.getElementById("family-carousel");
     const image = document.getElementById("carousel-image");
-    const video = document.getElementById("carousel-video");
     const caption = document.getElementById("carousel-caption");
     const count = document.getElementById("carousel-count");
     const prevBtn = document.getElementById("carousel-prev");
@@ -141,26 +138,11 @@
         const slide = slides[index];
         const lang = getCurrentLang();
         const langCaptions = captionsByLang[lang];
-        const isVideo = slide.type === "video";
 
-        if (isVideo) {
-            image.hidden = true;
-            video.hidden = false;
-            video.src = slide.src;
-            video.poster = slide.poster || "";
-            video.width = slide.width;
-            video.height = slide.height;
-            video.setAttribute("aria-label", slide.alt);
-            video.play().catch(function () { });
-        } else {
-            video.pause();
-            video.hidden = true;
-            image.hidden = false;
-            image.src = slide.src;
-            image.alt = slide.alt;
-            image.width = slide.width;
-            image.height = slide.height;
-        }
+        image.src = slide.src;
+        image.alt = slide.alt;
+        image.width = slide.width;
+        image.height = slide.height;
 
         caption.textContent = (langCaptions && langCaptions[index]) || slide.caption;
         count.textContent = (index + 1) + " / " + slides.length;
@@ -181,7 +163,6 @@
     function closeCarousel() {
         modal.setAttribute("aria-hidden", "true");
         document.body.style.overflow = "";
-        video.pause();
         if (lastFocus) {
             lastFocus.focus();
         }
