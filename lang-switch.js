@@ -5,6 +5,21 @@
     var RTL_LANGS = ["ar", "fa"];
     var STORAGE_KEY = "site_lang";
     var currentLang = "en";
+    var AIWW_TRANSLATIONS = {
+        captions: {
+            "My Name is Mud": { en: "My Name is Mud", fr: "Mon nom est Mud", es: "Me llamo Mud", ar: "اسمي ماد", fa: "اسم من ماد است", zh: "我的名字是泥巴" },
+            "I Agree Piss Ham Wak Skippies": { en: "I Agree Piss Ham Wak Skippies", fr: "Je suis d’accord Piss Ham Wak Skippies", es: "Estoy de acuerdo Piss Ham Wak Skippies", ar: "أنا أوافق Piss Ham Wak Skippies", fa: "من موافقم Piss Ham Wak Skippies", zh: "我同意 Piss Ham Wak Skippies" },
+            "New YouTube video": { en: "New YouTube video", fr: "Nouvelle vidéo YouTube", es: "Nuevo video de YouTube", ar: "فيديو يوتيوب جديد", fa: "ویدیوی جدید یوتیوب", zh: "新的 YouTube 视频" },
+            "Deadman Walkin": { en: "Deadman Walkin", fr: "Homme mort qui marche", es: "Hombre muerto caminando", ar: "رجل ميت يمشي", fa: "مرد مرده راه می‌رود", zh: "行走的死人" },
+            "Chinese Dragon Cup": { en: "Chinese Dragon Cup", fr: "Coupe dragon chinoise", es: "Copa de dragon china", ar: "كوب التنين الصيني", fa: "جام اژدهای چینی", zh: "中国龙杯" },
+            "Other Dragon Cup": { en: "Other Dragon Cup", fr: "Autre coupe dragon", es: "Otra copa de dragon", ar: "كوب التنين الآخر", fa: "جام اژدهای دیگر", zh: "另一个龙杯" }
+        },
+        ui: {
+            "Return": { en: "Return", fr: "Retour", es: "Regresar", ar: "عودة", fa: "بازگشت", zh: "返回" },
+            "sometimes... you know... i think... if.. that's probably...": { en: "sometimes... you know... i think... if.. that's probably...", fr: "parfois... tu sais... je pense... si... c'est probablement...", es: "a veces... sabes... pienso... si... probablemente...", ar: "أحيانًا... كما تعلم... أعتقد... إذا... ربما...", fa: "گاهی... می‌دونی... فکر می‌کنم... اگر... احتمالاً...", zh: "有时候...你知道...我想...如果...大概是这样..." }
+        }
+    };
+    window.__AIWW_TRANSLATIONS = AIWW_TRANSLATIONS;
     var AUTO_TRANSLATIONS = {
         "← Back": { ar: "← رجوع", fa: "← بازگشت", zh: "← 返回" },
         "For Simple Navigation [embedded]": { ar: "لتصفح بسيط [مضمن]", fa: "برای ناوبری ساده [تعبیه‌شده]", zh: "用于简单导航 [嵌入]" },
@@ -286,19 +301,21 @@
                 { type: "attr", selector: "meta[name='description']", attr: "content", value: { en: "Neon-soaked carousel of surreal imagery. Click to expand. Pure cyberpunk vibes and dystopian energy.", fr: "Carrousel imbibé de néon d'imagerie surréaliste. Cliquez pour agrandir. Vibes cyberpunk pures et énergie dystopique.", es: "Carrusel impregnado de neón con imágenes surrealistas. Haz clic para ampliar. Vibraciones cyberpunk puras y energía distópica.", ar: "دوار مشبع بالنيون من الصور الفنية السريالية. انقر للتوسيع. اهتزازات سايبربانك نقية وطاقة ديستوبية.", fa: "کاروسل اشباع شده با نئون تصاویر سوررئالیستی. برای بزرگ کردن کلیک کنید. ارتعاشات خالص سایبرپانک و انرژی دیستوپیایی.", zh: "充满霓虹的超现实意象轮播。点击展开。纯粹的赛博朋克氛围和反乌托邦能量。" } },
                 { type: "attr", selector: "meta[property=\'og:description\']", attr: "content", value: { en: "Neon-soaked carousel of surreal imagery. Click to expand. Pure cyberpunk vibes and dystopian energy.", fr: "Carrousel imbibé de néon d'imagerie surréaliste. Cliquez pour agrandir. Vibes cyberpunk pures et énergie dystopique.", es: "Carrusel impregnado de neón con imágenes surrealistas. Haz clic para ampliar. Vibraciones cyberpunk puras y energía distópica.", ar: "دوار مشبع بالنيون من الصور الفنية السريالية. انقر للتوسيع. اهتزازات سايبربانك نقية وطاقة ديستوبية.", fa: "کاروسل اشباع شده با نئون تصاویر سوررئالیستی. برای بزرگ کردن کلیک کنید. ارتعاشات خالص سایبرپانک و انرژی دیستوپیایی.", zh: "充满霓虹的超现实意象轮播。点击展开。纯粹的赛博朋克氛围和反乌托邦能量。" } },
                 { type: "text", selector: "h1", value: { en: "Cyberpunk 2049: Wayway Edition", fr: "Cyberpunk 2049: Édition Wayway", es: "Cyberpunk 2049: Edición Wayway", ar: "سايبربانك 2049: طبعة Wayway", fa: "سایبرپانک 2049: نسخه Wayway", zh: "赛博朋克 2049：Wayway 版本" } },
-                { type: "text", selector: ".gallery div:nth-child(1) .caption", value: { en: "My Name is Mud", fr: "Mon Nom est Mud", es: "Mi Nombre es Mud", ar: "اسمي ماد", fa: "اسم من ماد است", zh: "我叫泥巴" } },
-                { type: "text", selector: ".gallery div:nth-child(2) .caption", value: { en: "I Agree Piss Ham Wak Skippies", fr: "Je suis d'accord Piss Ham Wak Skippies", es: "Estoy de acuerdo Piss Ham Wak Skippies", ar: "أنا أوافق Piss Ham Wak Skippies", fa: "من موافقم Piss Ham Wak Skippies", zh: "我同意 Piss Ham Wak Skippies" } },
-                { type: "text", selector: ".gallery div:nth-child(3) .caption", value: { en: "Deadman Walkin", fr: "Homme mort qui marche", es: "Hombre muerto caminando", ar: "رجل ميت يمشي", fa: "مرد مرده راه می‌رود", zh: "行走的死人" } },
-                { type: "text", selector: ".gallery div:nth-child(4) .caption", value: { en: "Chinese Dragon Cup", fr: "Coupe dragon chinoise", es: "Copa de dragon china", ar: "كوب التنين الصيني", fa: "جام اژدهای چینی", zh: "中国龙杯" } },
-                { type: "text", selector: ".gallery div:nth-child(5) .caption", value: { en: "Other Dragon Cup", fr: "Autre coupe dragon", es: "Otra copa de dragon", ar: "كوب التنين الآخر", fa: "جام اژدهای دیگر", zh: "另一个龙杯" } },
+                { type: "text", selector: ".gallery div:nth-child(1) .caption", value: AIWW_TRANSLATIONS.captions["My Name is Mud"] },
+                { type: "text", selector: ".gallery div:nth-child(2) .caption", value: AIWW_TRANSLATIONS.captions["I Agree Piss Ham Wak Skippies"] },
+                { type: "text", selector: ".gallery div:nth-child(3) .caption", value: AIWW_TRANSLATIONS.captions["New YouTube video"] },
+                { type: "text", selector: ".gallery div:nth-child(4) .caption", value: AIWW_TRANSLATIONS.captions["Deadman Walkin"] },
+                { type: "text", selector: ".gallery div:nth-child(5) .caption", value: AIWW_TRANSLATIONS.captions["Chinese Dragon Cup"] },
+                { type: "text", selector: ".gallery div:nth-child(6) .caption", value: AIWW_TRANSLATIONS.captions["Other Dragon Cup"] },
                 { type: "attr", selector: ".gallery img", attr: "aria-label", value: { en: "Click any image or GIF to view in large carousel mode. Navigate with arrow keys or buttons.", fr: "Cliquez sur n'importe quelle image ou GIF pour voir en mode carrousel large. Naviguez avec les touches fléchées ou les boutons.", es: "Haz clic en cualquier imagen o GIF para verlo en modo carrusel grande. Navega con las teclas de flecha o los botones.", ar: "انقر على أي صورة أو صورة متحركة لعرضها في وضع عرض شامل. تنقل باستخدام مفاتيح الأسهم أو الأزرار.", fa: "برای مشاهده در حالت کاروسل بزرگ روی هر تصویر یا GIF کلیک کنید. با کلیدهای فلش یا دکمه‌ها حرکت کنید.", zh: "点击任何图像或 GIF 以大轮播模式查看。使用箭头键或按钮导航。" } },
                 { type: "attr", selector: "#wayway-carousel", attr: "aria-label", value: { en: "Wayway carousel controls", fr: "Contrôles du carrousel Wayway", es: "Controles del carrusel Wayway", ar: "عناصر تحكم دوار Wayway", fa: "کنترل‌های کاروسل Wayway", zh: "Wayway 轮播控件" } },
                 { type: "attr", selector: "#carousel-img", attr: "aria-label", value: { en: "Neon-soaked surreal carousel", fr: "Carrousel surréaliste imbibé de néon", es: "Carrusel surrealista impregnado de neón", ar: "دوار فني سريالي مشبع بالنيون", fa: "کاروسل سوررئالیستی اشباع شده با نئون", zh: "霓虹浸透的超现实轮播" } },
                 { type: "attr", selector: "#return-btn", attr: "aria-label", value: { en: "Close carousel", fr: "Fermer le carrousel", es: "Cerrar carrusel", ar: "إغلاق العرض الدائري", fa: "بستن کاروسل", zh: "关闭轮播" } },
-                { type: "text", selector: "#return-btn", value: { en: "Return", fr: "Retour", es: "Regresar", ar: "عودة", fa: "بازگشت", zh: "返回" } },
+                { type: "text", selector: "#return-btn", value: AIWW_TRANSLATIONS.ui["Return"] },
                 { type: "attr", selector: "#carousel-prev", attr: "aria-label", value: { en: "Previous image", fr: "Image précédente", es: "Imagen anterior", ar: "الصورة السابقة", fa: "تصویر قبلی", zh: "上一张图片" } },
                 { type: "attr", selector: "#carousel-next", attr: "aria-label", value: { en: "Next image", fr: "Image suivante", es: "Siguiente imagen", ar: "الصورة التالية", fa: "تصویر بعدی", zh: "下一张图片" } },
                 { type: "text", selector: "#return-to-index", value: { en: "← Return", fr: "← Retour", es: "← Regresar", ar: "← عودة", fa: "← بازگشت", zh: "← 返回" } },
+                { type: "text", selector: "#desc", value: AIWW_TRANSLATIONS.ui["sometimes... you know... i think... if.. that's probably..."] },
                 { type: "text", selector: ".footer-text", value: { en: "©️ 2049 Cyberpunk Wayway Edition. All rights reserved.", fr: "©️ 2049 Cyberpunk Édition Wayway. Tous droits réservés.", es: "©️ 2049 Cyberpunk Edición Wayway. Todos los derechos reservados.", ar: "©️ 2049 سايبربانك طبعة Wayway. جميع الحقوق محفوظة.", fa: "©️ 2049 سایبرپانک نسخه Wayway. تمام حقوق محفوظ است.", zh: "©️ 2049 赛博朋克 Wayway 版本。保留所有权利。" } }
             ],
             "barbie-collage.html": [
