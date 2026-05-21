@@ -32,6 +32,28 @@ const carouselData = [
             fa: 'مرد مرده راه می‌رود',
             zh: '行走的死人'
         }
+    },
+    {
+        img: 'chinese-dragon-cup.webp',
+        captions: {
+            en: 'Chinese Dragon Cup',
+            fr: 'Coupe dragon chinoise',
+            es: 'Copa de dragon china',
+            ar: 'كوب التنين الصيني',
+            fa: 'جام اژدهای چینی',
+            zh: '中国龙杯'
+        }
+    },
+    {
+        img: 'other-dragon-cup.webp',
+        captions: {
+            en: 'Other Dragon Cup',
+            fr: 'Autre coupe dragon',
+            es: 'Otra copa de dragon',
+            ar: 'كوب التنين الآخر',
+            fa: 'جام اژدهای دیگر',
+            zh: '另一个龙杯'
+        }
     }
 ];
 const returnBtnText = {
@@ -56,7 +78,7 @@ let carouselImg;
 let carouselCaption;
 let returnBtn;
 let desc;
-let galleryImgs;
+let galleryItems;
 
 function getLang() {
     // Check URL parameter first
@@ -79,9 +101,9 @@ function getBaseName(path) {
     return path.split('/').pop().split('?')[0];
 }
 
-function findSlideIndexFromImage(imgElement) {
-    const clickedName = getBaseName(imgElement.getAttribute('src') || '');
-    const matchIndex = carouselData.findIndex((item) => item.img === clickedName);
+function findSlideIndexFromMedia(mediaElement) {
+    const clickedName = getBaseName(mediaElement.getAttribute('src') || '');
+    const matchIndex = carouselData.findIndex((item) => (item.img || item.video) === clickedName);
     return matchIndex >= 0 ? matchIndex : 0;
 }
 
@@ -90,8 +112,9 @@ function updateCarousel() {
     if (!carouselImg || !carouselCaption || !returnBtn || !desc) {
         return;
     }
-    carouselImg.src = carouselData[current].img;
-    carouselCaption.textContent = carouselData[current].captions[lang] || carouselData[current].captions['en'];
+    const currentItem = carouselData[current];
+    carouselImg.src = currentItem.img;
+    carouselCaption.textContent = currentItem.captions[lang] || currentItem.captions['en'];
     returnBtn.textContent = returnBtnText[lang] || returnBtnText['en'];
     desc.textContent = descText[lang] || descText['en'];
 }
@@ -126,19 +149,19 @@ window.addEventListener('DOMContentLoaded', () => {
     carouselCaption = document.getElementById('carousel-caption');
     returnBtn = document.getElementById('return-btn');
     desc = document.getElementById('desc');
-    galleryImgs = Array.from(document.querySelectorAll('.gallery img'));
+    galleryItems = Array.from(document.querySelectorAll('.gallery img'));
     const prevBtn = document.getElementById('carousel-prev');
     const nextBtn = document.getElementById('carousel-next');
 
-    if (!overlay || !carouselImg || !carouselCaption || !returnBtn || !desc || !prevBtn || !nextBtn || galleryImgs.length === 0) {
+    if (!overlay || !carouselImg || !carouselCaption || !returnBtn || !desc || !prevBtn || !nextBtn || galleryItems.length === 0) {
         return;
     }
 
     updateCarousel();
 
-    galleryImgs.forEach((img) => {
-        img.addEventListener('click', () => {
-            openCarousel(findSlideIndexFromImage(img));
+    galleryItems.forEach((mediaElement) => {
+        mediaElement.addEventListener('click', () => {
+            openCarousel(findSlideIndexFromMedia(mediaElement));
         });
     });
 
