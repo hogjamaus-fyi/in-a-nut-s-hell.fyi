@@ -14,7 +14,9 @@
             "Chinese Dragon Cup": { en: "Chinese Dragon Cup", fr: "Coupe dragon chinoise", es: "Copa de dragon china", ar: "كوب التنين الصيني", fa: "جام اژدهای چینی", zh: "中国龙杯" },
             "Other Dragon Cup": { en: "Other Dragon Cup", fr: "Autre coupe dragon", es: "Otra copa de dragon", ar: "كوب التنين الآخر", fa: "جام اژدهای دیگر", zh: "另一个龙杯" },
             "Train Nowayway": { en: "Train Nowayway", fr: "Train Nowayway", es: "Tren Nowayway", ar: "قطار Nowayway", fa: "قطار Nowayway", zh: "Nowayway 列车" },
-            "Cyberpunk Deathnote": { en: "Cyberpunk Deathnote", fr: "Death Note cyberpunk", es: "Death Note cyberpunk", ar: "مذكرة الموت السيبربانكية", fa: "دفتر مرگ سایبرپانکی", zh: "赛博朋克死亡笔记" }
+            "Cyberpunk Deathnote": { en: "Cyberpunk Deathnote", fr: "Death Note cyberpunk", es: "Death Note cyberpunk", ar: "مذكرة الموت السيبربانكية", fa: "دفتر مرگ سایبرپانکی", zh: "赛博朋克死亡笔记" },
+            "power": { en: "power", fr: "puissance", es: "poder", ar: "قوة", fa: "قدرت", zh: "力量" },
+            "only power": { en: "only power", fr: "only puissance", es: "only poder", ar: "only قوة", fa: "only قدرت", zh: "only 力量" }
         },
         ui: {
             "Return": { en: "Return", fr: "Retour", es: "Regresar", ar: "عودة", fa: "بازگشت", zh: "返回" },
@@ -369,6 +371,8 @@
                 { type: "text", selector: ".gallery div:nth-child(6) .caption", value: AIWW_TRANSLATIONS.captions["Other Dragon Cup"] },
                 { type: "text", selector: ".gallery div:nth-child(7) .caption", value: AIWW_TRANSLATIONS.captions["Train Nowayway"] },
                 { type: "text", selector: ".gallery div:nth-child(8) .caption", value: AIWW_TRANSLATIONS.captions["Cyberpunk Deathnote"] },
+                { type: "text", selector: ".gallery div:nth-child(9) .caption", value: AIWW_TRANSLATIONS.captions["power"] },
+                { type: "text", selector: ".gallery div:nth-child(10) .caption", value: AIWW_TRANSLATIONS.captions["only power"] },
                 { type: "attr", selector: ".gallery img", attr: "aria-label", value: { en: "Click any image or GIF to view in large carousel mode. Navigate with arrow keys or buttons.", fr: "Cliquez sur n'importe quelle image ou GIF pour voir en mode carrousel large. Naviguez avec les touches fléchées ou les boutons.", es: "Haz clic en cualquier imagen o GIF para verlo en modo carrusel grande. Navega con las teclas de flecha o los botones.", ar: "انقر على أي صورة أو صورة متحركة لعرضها في وضع عرض شامل. تنقل باستخدام مفاتيح الأسهم أو الأزرار.", fa: "برای مشاهده در حالت کاروسل بزرگ روی هر تصویر یا GIF کلیک کنید. با کلیدهای فلش یا دکمه‌ها حرکت کنید.", zh: "点击任何图像或 GIF 以大轮播模式查看。使用箭头键或按钮导航。" } },
                 { type: "attr", selector: "#wayway-carousel", attr: "aria-label", value: { en: "Wayway carousel controls", fr: "Contrôles du carrousel Wayway", es: "Controles del carrusel Wayway", ar: "عناصر تحكم دوار Wayway", fa: "کنترل‌های کاروسل Wayway", zh: "Wayway 轮播控件" } },
                 { type: "attr", selector: "#carousel-img", attr: "aria-label", value: { en: "Neon-soaked surreal carousel", fr: "Carrousel surréaliste imbibé de néon", es: "Carrusel surrealista impregnado de neón", ar: "دوار فني سريالي مشبع بالنيون", fa: "کاروسل سوررئالیستی اشباع شده با نئون", zh: "霓虹浸透的超现实轮播" } },

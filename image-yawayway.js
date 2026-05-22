@@ -40,6 +40,16 @@ const carouselData = [
         type: 'image',
         img: 'cyberpunk-deathnote.webp',
         captionKey: 'Cyberpunk Deathnote'
+    },
+    {
+        type: 'image',
+        img: 'tweet-2057398690810036569.webp',
+        captionKey: 'power'
+    },
+    {
+        type: 'image',
+        img: 'tweet-2057398693184110759.webp',
+        captionKey: 'only power'
     }
 ];
 
