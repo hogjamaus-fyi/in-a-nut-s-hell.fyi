@@ -60,7 +60,8 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
         }
 
         body {
@@ -69,7 +70,7 @@
 
         .container {
             width: 100%;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -129,6 +130,17 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
             width: 100%;
+        }
+
+        .gallery-divider {
+            grid-column: 1 / -1;
+            margin: 0.5rem 0;
+            text-align: center;
+            color: rgba(250, 253, 255, 0.92);
+            font-family: "Fredoka", "Trebuchet MS", sans-serif;
+            font-size: 1rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
 
         .gallery-thumb {
@@ -254,6 +266,13 @@
                 <img src="tw4.webp" alt="post 4" class="gallery-thumb" data-index="3">
                 <img src="tw5.webp" alt="post 5" class="gallery-thumb" data-index="4">
                 <img src="tw6.webp" alt="post 6" class="gallery-thumb" data-index="5">
+                <div class="gallery-divider">War General & CTO of America , Art & Earnest</div>
+                <img src="tw7.webp" alt="post 7" class="gallery-thumb" data-index="6">
+                <img src="tw8.webp" alt="post 8" class="gallery-thumb" data-index="7">
+                <img src="tw9.webp" alt="post 9" class="gallery-thumb" data-index="8">
+                <img src="tw10.webp" alt="post 10" class="gallery-thumb" data-index="9">
+                <img src="tw11.webp" alt="post 11" class="gallery-thumb" data-index="10">
+                <img src="tw12.webp" alt="post 12" class="gallery-thumb" data-index="11">
             </div>
 
             <!-- Lightbox Modal -->
@@ -267,7 +286,7 @@
     </div>
 
     <script src="image-gallery.js"></script>
-    <script src="i18n-2026-05-22-05-11-00.js"></script>
+    <script src="i18n-2026-05-23-02-32-00.js"></script>
 </body>
 
 </html>

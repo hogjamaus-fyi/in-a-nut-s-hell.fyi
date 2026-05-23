@@ -131,7 +131,7 @@
         .collage-grid {
             display: grid;
             grid-template-columns: repeat(12, minmax(0, 1fr));
-            grid-template-rows: repeat(8, minmax(48px, auto));
+            grid-template-rows: repeat(16, minmax(48px, auto));
             gap: 14px;
             padding: 14px;
             border-radius: 24px;
@@ -206,6 +206,42 @@
             --tilt: -1.7deg;
             grid-column: 7 / span 6;
             grid-row: 6 / span 3;
+        }
+
+        .tile-6 {
+            --tilt: 1.4deg;
+            grid-column: 1 / span 4;
+            grid-row: 9 / span 4;
+        }
+
+        .tile-7 {
+            --tilt: -2deg;
+            grid-column: 5 / span 4;
+            grid-row: 9 / span 3;
+        }
+
+        .tile-8 {
+            --tilt: 1.1deg;
+            grid-column: 9 / span 4;
+            grid-row: 10 / span 3;
+        }
+
+        .tile-9 {
+            --tilt: -1.5deg;
+            grid-column: 1 / span 4;
+            grid-row: 13 / span 4;
+        }
+
+        .tile-10 {
+            --tilt: 1.8deg;
+            grid-column: 5 / span 4;
+            grid-row: 13 / span 3;
+        }
+
+        .tile-11 {
+            --tilt: -1deg;
+            grid-column: 9 / span 4;
+            grid-row: 14 / span 3;
         }
 
         .hint {
@@ -380,7 +416,7 @@
 
         <section class="hero">
             <h1>Barbiecore Memory Board</h1>
-            <p>Five latest tweet snapshots, sorted by date in the PNG filename, styled like a sticker collage. Tap any tile to open the carousel.</p>
+            <p>Eleven latest tweet snapshots, sorted by date in the PNG filename, styled like a sticker collage. Tap any tile to open the carousel.</p>
             <p class="tagline">Come on Barbie, let us go party... in a responsible image gallery.</p>
         </section>
 
@@ -405,6 +441,30 @@
                 <img class="gallery-thumb" data-index="4" src="tweet-2056497017958940728.webp" alt="Newest tweet snapshot in the five-image Barbie collage carousel">
                 <span class="caption">Newest sparkle in the lineup</span>
             </div>
+            <div class="tile tile-6">
+                <img class="gallery-thumb" data-index="5" src="tw7.webp" alt="Sixth tweet snapshot added to the Barbie collage carousel">
+                <span class="caption">Receipts keep coming</span>
+            </div>
+            <div class="tile tile-7">
+                <img class="gallery-thumb" data-index="6" src="tw8.webp" alt="Seventh tweet snapshot added to the Barbie collage carousel">
+                <span class="caption">Still talking to the void</span>
+            </div>
+            <div class="tile tile-8">
+                <img class="gallery-thumb" data-index="7" src="tw9.webp" alt="Eighth tweet snapshot added to the Barbie collage carousel">
+                <span class="caption">Final slide, same energy</span>
+            </div>
+            <div class="tile tile-9">
+                <img class="gallery-thumb" data-index="8" src="tw10.webp" alt="Ninth tweet snapshot added to the Barbie collage carousel">
+                <span class="caption">More receipts, louder now</span>
+            </div>
+            <div class="tile tile-10">
+                <img class="gallery-thumb" data-index="9" src="tw11.webp" alt="Tenth tweet snapshot added to the Barbie collage carousel">
+                <span class="caption">Still not done speaking</span>
+            </div>
+            <div class="tile tile-11">
+                <img class="gallery-thumb" data-index="10" src="tw12.webp" alt="Eleventh tweet snapshot added to the Barbie collage carousel">
+                <span class="caption">Last word, first class</span>
+            </div>
         </section>
 
         <p class="hint">Use arrow keys in the modal to move through the carousel.</p>
@@ -427,7 +487,7 @@
     </main>
 
     <script src="image-gallery.js"></script>
-    <script src="i18n-2026-05-22-05-11-00.js"></script>
+    <script src="i18n-2026-05-23-02-32-00.js"></script>
     <script src="image-pink-guy.js"></script>
 </body>
 
