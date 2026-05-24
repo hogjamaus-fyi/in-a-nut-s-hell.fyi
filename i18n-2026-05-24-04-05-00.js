@@ -447,9 +447,28 @@
                 { type: "attr", selector: "meta[property=\'og:description\']", attr: "content", value: { en: "Browse Posts, Toasts and Roasts: curated social posts featuring humor, commentary, and culture.", fr: "Parcourez Posts, Toasts et Roasts : des publications sociales selectionnees avec humour, commentaires et culture.", es: "Explora Posts, Toasts y Roasts: publicaciones sociales seleccionadas con humor, comentario y cultura.", ar: "تصفح المنشورات والخبز المحمص والحمص: منشورات اجتماعية منسقة تتميز بالفكاهة والتعليق والثقافة.", fa: "پست‌ها، نان تست‌ها و کباب‌ها را مرور کنید: پست‌های اجتماعی انتخاب‌شده با طنز، تفسیر و فرهنگ.", zh: "浏览帖子、吐司和吐槽：精选的社交帖子，内容包含幽默、评论和文化。" } },
                 { type: "text", selector: ".back-link a", value: { en: "← Back", fr: "← Retour", es: "← Volver", ar: "← العودة", fa: "← برگشت", zh: "← 返回" } },
                 { type: "text", selector: ".header h1", value: { en: "posts, toasts and roasts", fr: "posts, toasts et rotis", es: "posts, toasts y roasts", ar: "المشاركات والخبز المحمص والمحمص", fa: "پست، نان تست و کباب", zh: "帖子、吐司和烤肉" } },
-                { type: "text", selector: ".header p", value: { en: "Twitter [english]", fr: "Twitter [anglais]", es: "Twitter [ingles]", ar: "تويتر [إنجليزي]", fa: "توییتر [انگلیسی]", zh: "推特 [英文]" } },
+                {
+                    type: "text", selector: ".header p", value: {
+                        en: "JUST SOME TWEETS FROM A ONE SIDED CONVERSATION",
+                        fr: "JUSTE QUELQUES TWEETS D'UNE CONVERSATION À SENS UNIQUE",
+                        es: "SÓLO ALGUNOS TWEETS DE UNA CONVERSACIÓN UNILATERAL",
+                        ar: "مجرد بعض التغريدات من محادثة من طرف واحد",
+                        fa: "فقط چند توییت از یک گفتگوی یک طرفه",
+                        zh: "只是一些单方面对话的推文"
+                    },
+                },
                 { type: "text", selector: ".gallery-divider", value: { en: "War General & CTO of America , Art & Earnest", fr: "Général de guerre et directeur technique de l’Amérique, Art & Sincérité", es: "General de guerra y CTO de América, Arte y sinceridad", ar: "الجنرال الحربي ومدير التكنولوجيا في أمريكا، الفن والإخلاص", fa: "ژنرال جنگ و مدیر فنی آمریکا، هنر و صداقت", zh: "美国战时将军兼首席技术官，艺术与真诚" } },
-                { type: "attr", selector: "#lightbox-image", attr: "alt", value: { en: "enlarged image", fr: "image agrandie", es: "imagen ampliada", ar: "صورة مكبرة", fa: "تصویر بزرگ شده", zh: "放大图像" } }
+                { type: "attr", selector: "#lightbox-image", attr: "alt", value: { en: "enlarged image", fr: "image agrandie", es: "imagen ampliada", ar: "صورة مكبرة", fa: "تصویر بزرگ شده", zh: "放大图像" } },
+                {
+                    type: "text", selector: ".i18n-nice-function-day", value: {
+                        en: "NICE FUNCTION DAY",
+                        fr: "BONNE JOURNÉE DE FONCTION",
+                        es: "FELIZ DÍA DE FUNCIÓN",
+                        ar: "يوم وظيفة جميل",
+                        fa: "روز عملکرد خوبی",
+                        zh: "美好函数日"
+                    }
+                }
             ],
             "big-genius-ai.html": [
                 { type: "attr", selector: "title", attr: "text", value: { en: "big genius ai", fr: "grand genie ia", es: "gran genio ia", ar: "عبقري كبير بالنيابة", fa: "نابغه بزرگ ai", zh: "大天才艾" } },
