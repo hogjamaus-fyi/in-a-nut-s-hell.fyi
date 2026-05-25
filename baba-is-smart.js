@@ -30,9 +30,9 @@
         {
             src: "berfect.webp",
             alt: "Sep Jr. image from berfect.webp",
-            caption: "say\"\ni am  the hero, start at zero            [0]\nthink it through one and two             [1 2]\nthree and four, five no more             [3 4 5]\nnow count to six, easy fix               [6]\ntake another, up to seven                [7]\njust wait, now i have eight              [8]\nnine for mother,                         [9]\nwe have too much, what do we do?         [?]\nthese numbers have 10 letters,           [?]  \nso we talk all we count and make         [0 1 2 3 4 5 6 7 8 9]\nit one group, in front                   [1?]\nto the new job, to count to ten,         [10]\nall over again! Oh Brother               [11]\nwhat will you do, when you get to ten?   [19]\ncall your mother? or ask a chicken then? [??]\n\nwe start all over, oh brother! [10]\n\nwhy is he smart now? by Sep Jr.",
-            width: 915,
-            height: 1100
+            caption: "say\"\ni am  the hero, start at zero            [0]\nthink it through one and two             [1 2]\nthree and four, five no more             [3 4 5]\nnow count to six, easy fix               [6]\ntake another, up to seven                [7]\njust wait, now i have eight              [8]\nnine for mother,                         [9]\nwe have too much, what do we do?         [?]\nthese numbers have 10 letters,           [?]  \nso we talk all we count and make         [0 1 2 3 4 5 6 7 8 9]\nit one group, in front                   [1?]\nto the new job, to count to ten,         [10]\nall over again! Oh Brother               [11]\nwhat will you do, when you get to ten?   [19]\ncall your mother? or ask a chicken then? [??]\n\nwhy is he smart now? by Sep Jr.",
+              width: 915,
+              height: 1100
         },
         {
             src: "mum----you-beautiful.webp",
