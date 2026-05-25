@@ -471,7 +471,7 @@
                 },
                 {
                     type: "text", selector: ".i18n-piss-bank", value: {
-                        en: "PISS BANK ~ EN EXILE, MONA LISA ~ SPIRIT WALKING WITH MONA LISA",
+                        en: "PISS BANK ~ IN EXILE, MONA LISA ~ SPIRIT WALKING WITH MONA LISA",
                         fr: "BANQUE DE PISSE ~ EN EXIL, MONA LISA ~ MARCHEZ AVEC L'ESPRIT DE LA MONA LISA",
                         es: "BANCO DE ORINA ~ EN EXILIO, MONA LISA ~ CAMINANDO CON EL ESPÍRITU DE LA MONA LISA",
                         ar: "بنك البول ~ في المنفى، الموناليزا ~ السير مع روح الموناليزا",
