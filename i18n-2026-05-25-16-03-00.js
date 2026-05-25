@@ -468,6 +468,16 @@
                         fa: "روز عملکرد خوبی",
                         zh: "美好函数日"
                     }
+                },
+                {
+                    type: "text", selector: ".i18n-piss-bank", value: {
+                        en: "PISS BANK ~ EN EXILE, MONA LISA ~ SPIRIT WALKING WITH MONA LISA",
+                        fr: "BANQUE DE PISSE ~ EN EXIL, MONA LISA ~ MARCHEZ AVEC L'ESPRIT DE LA MONA LISA",
+                        es: "BANCO DE ORINA ~ EN EXILIO, MONA LISA ~ CAMINANDO CON EL ESPÍRITU DE LA MONA LISA",
+                        ar: "بنك البول ~ في المنفى، الموناليزا ~ السير مع روح الموناليزا",
+                        fa: "بانک ادرار ~ در تبعید، مونالیزا ~ با روح مونالیزا قدم بزنید",
+                        zh: "尿银行 ~ 流亡中的蒙娜丽莎 ~ 与蒙娜丽莎的灵魂同行"
+                    }
                 }
             ],
             "big-genius-ai.html": [
