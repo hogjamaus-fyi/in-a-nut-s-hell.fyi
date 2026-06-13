@@ -12,8 +12,8 @@ const carouselData = [
     },
     {
         type: 'video',
-        videoId: 'mt9NzWYHPHo',
-        thumbnail: 'https://img.youtube.com/vi/mt9NzWYHPHo/maxresdefault.jpg',
+        videoId: 'E6JQwjdxn4M',
+        thumbnail: 'https://img.youtube.com/vi/E6JQwjdxn4M/maxresdefault.jpg',
         captionKey: 'New YouTube video'
     },
     {
@@ -54,7 +54,7 @@ const carouselData = [
 ];
 
 const AIWW_DESC_KEY = "sometimes... you know... i think... if.. that's probably...";
-const YT_VIDEO_ID = 'mt9NzWYHPHo';
+const YT_VIDEO_ID = 'E6JQwjdxn4M';
 
 let current = 0;
 let overlay;
