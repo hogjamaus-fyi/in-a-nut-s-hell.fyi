@@ -13,7 +13,7 @@ const carouselData = [
     {
         type: 'video',
         videoId: 'E6JQwjdxn4M',
-        thumbnail: 'https://img.youtube.com/vi/E6JQwjdxn4M/maxresdefault.jpg',
+        thumbnail: 'angulfullpower.webp',
         captionKey: 'New YouTube video'
     },
     {
