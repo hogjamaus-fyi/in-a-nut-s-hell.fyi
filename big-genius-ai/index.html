@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Big Genius AI Showcase | in-a-nut-s-hell.fyi</title>
+    <meta name="description" content="Explore the Big Genius AI showcase: a styled code snippet and live embedded preview of the project in one interactive page.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="in-a-nut-s-hell.fyi">
+    <meta name="theme-color" content="#0d2310">
+    <link rel="canonical" href="https://in-a-nut-s-hell.fyi/big-genius-ai/">
+    <link rel="alternate" hreflang="en" href="https://in-a-nut-s-hell.fyi/big-genius-ai/">
+    <link rel="alternate" hreflang="fr" href="https://in-a-nut-s-hell.fyi/big-genius-ai/?lang=fr">
+    <link rel="alternate" hreflang="es" href="https://in-a-nut-s-hell.fyi/big-genius-ai/?lang=es">
+    <link rel="alternate" hreflang="ar" href="https://in-a-nut-s-hell.fyi/big-genius-ai/?lang=ar">
+    <link rel="alternate" hreflang="fa" href="https://in-a-nut-s-hell.fyi/big-genius-ai/?lang=fa">
+    <link rel="alternate" hreflang="zh" href="https://in-a-nut-s-hell.fyi/big-genius-ai/?lang=zh">
+    <link rel="alternate" hreflang="x-default" href="https://in-a-nut-s-hell.fyi/big-genius-ai/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="fa_IR">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:site_name" content="in-a-nut-s-hell.fyi">
+    <meta property="og:logo" content="https://in-a-nut-s-hell.fyi/favicon.svg">
+    <meta property="og:title" content="Big Genius AI Showcase | in-a-nut-s-hell.fyi">
+    <meta property="og:description" content="Explore the Big Genius AI showcase: a styled code snippet and live embedded preview of the project in one interactive page.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://in-a-nut-s-hell.fyi/big-genius-ai/">
+    <meta property="og:image" content="https://in-a-nut-s-hell.fyi/squirrel.webp">
+    <meta property="og:image:secure_url" content="https://in-a-nut-s-hell.fyi/squirrel.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Squirrel artwork from in-a-nut-s-hell.fyi">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Big Genius AI Showcase | in-a-nut-s-hell.fyi">
+    <meta name="twitter:description" content="Explore the Big Genius AI showcase: a styled code snippet and live embedded preview of the project in one interactive page.">
+    <meta name="twitter:image" content="https://in-a-nut-s-hell.fyi/squirrel.webp">
+    <meta name="twitter:image:alt" content="Squirrel artwork from in-a-nut-s-hell.fyi">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Big Genius AI Showcase",
+            "url": "https://in-a-nut-s-hell.fyi/big-genius-ai/",
+            "description": "A page showcasing big-genius-ai.py and a live interactive project iframe.",
+            "inLanguage": "en",
+            "publisher": {
+                "@type": "Organization",
+                "name": "in-a-nut-s-hell.fyi"
+            }
+        }
+    </script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap");
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        body {
+            font-family: "Fredoka", "Trebuchet MS", sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(122, 179, 255, 0.24), transparent 34%),
+                radial-gradient(circle at bottom right, rgba(146, 255, 181, 0.16), transparent 28%),
+                linear-gradient(180deg, #08140a 0%, #0d2310 54%, #08140a 100%);
+            color: rgba(248, 251, 255, 0.92);
+            overflow-x: hidden;
+        }
+
+        .page {
+            min-height: 100vh;
+            padding: 24px;
+            display: grid;
+            place-items: center;
+        }
+
+        .shell {
+            width: min(1320px, 100%);
+            display: grid;
+            gap: 1.25rem;
+        }
+
+        .topbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .back-link {
+            color: rgba(255, 255, 255, 0.84);
+            text-decoration: none;
+            padding: 0.78rem 1rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: transform 0.18s ease, background-color 0.18s ease;
+        }
+
+        .back-link:hover,
+        .back-link:focus-visible {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .title-block {
+            text-align: right;
+        }
+
+        .title-block h1 {
+            margin: 0;
+            font-size: clamp(1.5rem, 3vw, 2.4rem);
+            letter-spacing: 0.04em;
+        }
+
+        .title-block p {
+            margin: 0.35rem 0 0;
+            color: rgba(236, 246, 255, 0.74);
+        }
+
+        .viewer-card {
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
+            box-shadow: 0 28px 70px rgba(4, 11, 7, 0.42);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            overflow: hidden;
+        }
+
+        .viewer-card {
+            padding: 1rem;
+        }
+
+        .viewer-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            align-items: end;
+            margin-bottom: 1rem;
+        }
+
+        .viewer-head h2 {
+            margin: 0;
+            font-size: clamp(1.15rem, 2.3vw, 1.55rem);
+        }
+
+        .viewer-head p {
+            margin: 0.3rem 0 0;
+            color: rgba(238, 246, 255, 0.76);
+        }
+
+        .frame-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            align-items: stretch;
+        }
+
+        .frame-window {
+            position: relative;
+            min-height: 94vh;
+            overflow: hidden;
+            border-radius: 18px;
+            background: linear-gradient(180deg, rgba(12, 28, 16, 0.78), rgba(6, 13, 9, 0.88));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        }
+
+        .frame-window::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 18%, transparent 82%, rgba(255, 255, 255, 0.04));
+            z-index: 2;
+        }
+
+        iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            pointer-events: auto;
+            background: #0b1710;
+        }
+
+        .frame-note {
+            position: absolute;
+            left: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+            z-index: 3;
+            padding: 0.7rem 0.9rem;
+            border-radius: 999px;
+            background: rgba(7, 17, 10, 0.72);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: rgba(236, 246, 255, 0.8);
+            font-size: 0.92rem;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        @media (max-width: 760px) {
+            .page {
+                padding: 16px;
+            }
+
+            .frame-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .frame-window {
+                min-height: 88vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="shell">
+            <div class="topbar">
+                <a class="back-link" href="../embedded.html">← Retour</a>
+                <div class="title-block">
+                    <h1>big genius ai</h1>
+                    <p>github preview</p>
+                </div>
+            </div>
+
+            <section class="viewer-card" aria-label="GitHub iframe preview">
+                <div class="viewer-head">
+                    <div>
+                        <h2>hogjamaus / big-ai-genius-level-emotions-detection-recognition</h2>
+                        <p>live preview in an interactive iframe.</p>
+                    </div>
+                </div>
+
+                <div class="frame-grid">
+                    <div class="frame-window" id="frameWindow">
+                        <iframe
+                            id="githubFrame"
+                            src="https://hogjamaus-fyi.github.io/big-ai-genius-level-emotions-detection-recognition/index.html"
+                            title="GitHub repository preview"
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                        <div class="frame-note">universe not ai generated . univers pas ia généré</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="../image-gallery.js"></script>
+    <script src="big-genius-ai-lang-switch.js"></script>
+    <script src="../i18n.js"></script>
+</body>
+
+</html>

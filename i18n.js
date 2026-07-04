@@ -184,7 +184,11 @@
     };
 
     function getPageName() {
-        var name = window.location.pathname.split("/").pop();
+        var normalizedPath = window.location.pathname.replace(/\/+$/, "");
+        var name = normalizedPath.split("/").pop();
+        if (name === "big-genius-ai") {
+            return "big-genius-ai.html";
+        }
         return name || "index.html";
     }
 
