@@ -134,6 +134,7 @@
             color: rgba(236, 246, 255, 0.74);
         }
 
+        .code-card,
         .viewer-card {
             border-radius: 24px;
             border: 1px solid rgba(255, 255, 255, 0.18);
@@ -142,6 +143,38 @@
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             overflow: hidden;
+        }
+
+        .code-card {
+            padding: 1rem 1.1rem 1.15rem;
+        }
+
+        .code-meta {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 0.9rem;
+            color: rgba(245, 250, 255, 0.78);
+            font-size: 0.94rem;
+        }
+
+        .code-meta strong {
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 600;
+        }
+
+        pre {
+            margin: 0;
+            padding: 1rem;
+            border-radius: 18px;
+            background: rgba(7, 17, 10, 0.66);
+            color: #d7f8e1;
+            overflow: auto;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+            font-size: clamp(0.92rem, 1.8vw, 1.05rem);
+            line-height: 1.55;
+            border: 1px solid rgba(160, 255, 197, 0.12);
         }
 
         .viewer-card {
@@ -168,13 +201,15 @@
 
         .frame-grid {
             display: grid;
-            grid-template-columns: minmax(0, 1fr);
+            grid-template-columns: minmax(0, 1fr) 42px;
+            gap: 1rem;
             align-items: stretch;
         }
 
         .frame-window {
             position: relative;
-            min-height: 94vh;
+            min-height: 72vh;
+            max-height: 76vh;
             overflow: hidden;
             border-radius: 18px;
             background: linear-gradient(180deg, rgba(12, 28, 16, 0.78), rgba(6, 13, 9, 0.88));
@@ -195,9 +230,12 @@
             position: absolute;
             inset: 0;
             width: 100%;
-            height: 100%;
+            height: 220vh;
             border: none;
-            pointer-events: auto;
+            pointer-events: none;
+            transform: translateY(0);
+            transform-origin: top center;
+            transition: transform 0.04s linear;
             background: #0b1710;
         }
 
@@ -217,6 +255,31 @@
             -webkit-backdrop-filter: blur(10px);
         }
 
+        .slider-rail {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            padding: 0.35rem 0;
+        }
+
+        .scroll-slider {
+            width: 32px;
+            height: 100%;
+            margin: 0;
+            background: transparent;
+            cursor: ns-resize;
+            -webkit-appearance: slider-vertical;
+            appearance: slider-vertical;
+            writing-mode: vertical-lr;
+            direction: rtl;
+        }
+
+        .scroll-slider:focus-visible {
+            outline: 2px solid rgba(180, 231, 255, 0.9);
+            outline-offset: 4px;
+            border-radius: 999px;
+        }
+
         @media (max-width: 760px) {
             .page {
                 padding: 16px;
@@ -226,8 +289,23 @@
                 grid-template-columns: 1fr;
             }
 
+            .slider-rail {
+                order: 2;
+                justify-content: stretch;
+            }
+
+            .scroll-slider {
+                width: 100%;
+                height: 40px;
+                writing-mode: initial;
+                direction: ltr;
+                -webkit-appearance: auto;
+                appearance: auto;
+            }
+
             .frame-window {
-                min-height: 88vh;
+                min-height: 62vh;
+                max-height: 66vh;
             }
         }
     </style>
@@ -244,11 +322,20 @@
                 </div>
             </div>
 
+            <section class="code-card" aria-label="big-genius-ai.py code snippet">
+                <div class="code-meta">
+                    <strong>big-genius-ai.py</strong>
+                    <span>snippet at the top</span>
+                </div>
+                <pre><code>print("automate powerful friendship and emotional understanding...")
+print("pending input...")</code></pre>
+            </section>
+
             <section class="viewer-card" aria-label="GitHub iframe preview">
                 <div class="viewer-head">
                     <div>
                         <h2>hogjamaus / big-ai-genius-level-emotions-detection-recognition</h2>
-                        <p>live preview in an interactive iframe.</p>
+                        <p>scroll the preview with the slider on the right; the frame itself stays non-clickable.</p>
                     </div>
                 </div>
 
@@ -256,16 +343,39 @@
                     <div class="frame-window" id="frameWindow">
                         <iframe
                             id="githubFrame"
-                            src="https://hogjamaus.github.io/big-ai-genius-level-emotions-detection-recognition/index.html"
+                            src="https://github.com/hogjamaus/big-ai-genius-level-emotions-detection-recognition"
                             title="GitHub repository preview"
                             loading="lazy"
                             referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                        <div class="frame-note">universe not ai generated . univers pas ia généré</div>
+                        <div class="frame-note">If GitHub refuses to frame the page, the browser will still keep the preview shell in place.</div>
+                    </div>
+
+                    <div class="slider-rail">
+                        <input id="frameSlider" class="scroll-slider" type="range" min="0" max="100" value="0" aria-label="Preview scroll slider">
                     </div>
                 </div>
             </section>
         </div>
     </div>
+    <script>
+        const frameWindow = document.getElementById('frameWindow');
+        const githubFrame = document.getElementById('githubFrame');
+        const frameSlider = document.getElementById('frameSlider');
+
+        function updateFramePosition() {
+            const windowHeight = frameWindow.clientHeight;
+            const frameHeight = githubFrame.getBoundingClientRect().height;
+            const maxShift = Math.max(0, frameHeight - windowHeight);
+            const offset = maxShift * (Number(frameSlider.value) / 100);
+            githubFrame.style.transform = `translateY(${-offset}px)`;
+        }
+
+        frameSlider.addEventListener('input', updateFramePosition);
+        window.addEventListener('resize', updateFramePosition);
+        githubFrame.addEventListener('load', updateFramePosition);
+
+        updateFramePosition();
+    </script>
     <script src="image-gallery.js"></script>
     <script src="big-genius-ai-lang-switch.js"></script>
     <script src="i18n.js"></script>
